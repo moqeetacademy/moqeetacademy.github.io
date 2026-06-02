@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://moqeet.com/sitemap.xml
+
+# Disallow admin or private areas (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all educational content
+Allow: /notes/
+Allow: /premium-notes/
+Allow: /blog/
+Allow: /tutoring/
+Allow: /contact/
+Allow: /about/
+Allow: /faq/

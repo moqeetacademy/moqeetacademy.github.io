@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 9 Computer Science Chapter 6 Notes — Impacts of Computing | Moqeet Academy</title>
+  <meta name="description" content="Free Class 9 Computer Science Chapter 6 Notes on Impacts of Computing. Covers responsible hardware use, software ethics, social networking, fake news, privacy, and economic impacts. Fully solved MCQs, short questions, and long exercises.">
+  <link rel="canonical" href="https://moqeet.com/notes/class-9/computer-science/chapter-6/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Class 9 Computer Science Chapter 6 Notes — Impacts of Computing",
+    "description": "Comprehensive solved study guide for Class 9 Computer Science Chapter 6. Features solved textbook MCQs, detailed short responses, and long exercises covering responsible use of hardware, software ethics, social networking, fake news, and digital privacy.",
+    "author": {"@type": "Organization", "name": "Moqeet Online Academy"},
+    "publisher": {"@type": "Organization", "name": "Moqeet Online Academy", "url": "https://moqeet.com"},
+    "educationalLevel": "Grade 9",
+    "about": "Impacts of Computing, Digital Ethics, Social Networking, Fake News, Privacy, Economic Impact",
+    "inLanguage": "en"
+  }
+  </script>
+  <style>
+    :root {
+      --green: #1B4332;
+      --gold: #D4A017;
+      --bg: #FDFAF5;
+      --text: #1a1a1a;
+      --light-green: #e8f5ef;
+      --border: #d5e8dd;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .site-header {
+      background: var(--green);
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,.15);
+    }
+    .site-header .logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .header-wa {
+      background: var(--gold);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: .85rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .breadcrumb {
+      background: var(--light-green);
+      padding: 10px 24px;
+      font-size: .82rem;
+      color: #555;
+      border-bottom: 1px solid var(--border);
+    }
+    .breadcrumb a {
+      color: var(--green);
+    }
+    .breadcrumb span {
+      margin: 0 6px;
+    }
+    .page-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 32px;
+    }
+    @media (max-width: 860px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        display: none;
+      }
+    }
+    .main-content h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.9rem;
+      color: var(--green);
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+    .chapter-overview {
+      background: var(--light-green);
+      border-left: 4px solid var(--green);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 24px;
+      font-size: .97rem;
+    }
+    .key-topics {
+      margin-bottom: 28px;
+    }
+    .key-topics h3 {
+      font-family: 'Fraunces', serif;
+      color: var(--green);
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+    .key-topics ul {
+      padding-left: 20px;
+    }
+    .key-topics li {
+      margin-bottom: 5px;
+      font-size: .95rem;
+    }
+    .section-heading {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      color: var(--green);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 8px;
+      margin: 32px 0 18px;
+    }
+    .qa-item {
+      margin-bottom: 22px;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .qa-item .question {
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 8px;
+      font-size: .97rem;
+    }
+    .qa-item .answer {
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+    .qa-item .mcq-options {
+      margin: 10px 0;
+      list-style: none;
+      padding-left: 5px;
+    }
+    .qa-item .mcq-options li {
+      margin-bottom: 6px;
+    }
+    .qa-item .explanation {
+      margin-top: 10px;
+      font-size: 0.88rem;
+      color: #555;
+      background: #fdfaf4;
+      padding: 8px 12px;
+      border-left: 3px solid var(--gold);
+    }
+    .qa-item .answer ul, .qa-item .answer ol {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+    .qa-item .answer li {
+      margin-bottom: 4px;
+    }
+    .qa-item .answer p {
+      margin-bottom: 8px;
+    }
+    .notes-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: .9rem;
+    }
+    .notes-table th {
+      background: var(--green);
+      color: #fff;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    .notes-table td {
+      padding: 12px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .notes-table tr:nth-child(even) {
+      background: var(--light-green);
+    }
+    .exam-tip {
+      background: #fff8e7;
+      border: 2px solid var(--gold);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 32px 0;
+    }
+    .exam-tip h4 {
+      color: var(--gold);
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+    .cta-box{border-radius:12px;padding:28px;margin:32px 0;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.06);border:2px solid transparent}
+    .cta-box.pdf{background:#f0fdf4;border-color:#86efac;color:#1f2937}
+    .cta-box.premium{background:#fffbeb;border-color:#fde047;color:#1f2937}
+    .cta-box h3{font-family:'Fraunces',serif;font-size:1.35rem;margin-bottom:12px;color:#166534}
+    .cta-box.premium h3{color:#854d0e}
+    .cta-box p{font-size:1rem;color:#374151 !important;margin-bottom:20px;line-height:1.6}
+    .cta-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#f59e0b;color:#fff;padding:14px 32px;border-radius:8px;font-weight:700;font-size:1.05rem;transition:transform 0.2s, background 0.2s;text-decoration:none;border:none;cursor:pointer}
+    .cta-btn:hover{transform:translateY(-2px);background:#d97706;color:#fff;text-decoration:none}
+    .premium-card {
+      background: linear-gradient(135deg, #1B4332 0%, #2d6a4f 100%);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 36px 0;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(27,67,50,0.18);
+    }
+    .premium-card::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 160px; height: 160px;
+      background: rgba(212,160,23,0.13);
+      border-radius: 50%;
+    }
+    .premium-badge {
+      background: var(--gold);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 14px;
+      letter-spacing: 0.04em;
+    }
+    .premium-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .premium-card p {
+      font-size: 0.97rem;
+      color: #c8e6d4;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .premium-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.97rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .premium-btn:hover {
+      background: #1ebe59;
+      transform: translateY(-2px);
+      text-decoration: none;
+      color: #fff;
+    }
+    .chapter-nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 36px 0 16px;
+      gap: 12px;
+    }
+    .nav-btn {
+      background: var(--light-green);
+      border: 1px solid var(--border);
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--green);
+      flex: 1;
+      text-align: center;
+    }
+    .nav-btn:hover {
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+    }
+    .sidebar {
+      position: sticky;
+      top: 80px;
+      height: fit-content;
+    }
+    .sidebar-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+    .sidebar-card h4 {
+      font-family: 'Fraunces', serif;
+      color: var(--green);
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+    .chapter-list {
+      list-style: none;
+      padding: 0;
+    }
+    .chapter-list li {
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .chapter-list li:last-child {
+      border: none;
+    }
+    .chapter-list a {
+      display: block;
+      padding: 7px 4px;
+      font-size: .88rem;
+      color: #444;
+    }
+    .chapter-list a:hover {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .chapter-list a.active {
+      color: var(--green);
+      font-weight: 700;
+    }
+    .sidebar-wa {
+      display: block;
+      background: #25D366;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .9rem;
+      margin-top: 4px;
+    }
+    .float-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: #fff;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      z-index: 999;
+      box-shadow: 0 4px 16px rgba(37,211,102,.4);
+      text-decoration: none;
+    }
+    .site-footer { background: #0f2920; color: #ffffff; text-align: center; padding: 20px 15px; font-size: 0.95rem; margin-top: 48px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .site-footer a { color: #f8d161; text-decoration: none; }
+.site-footer a:hover { color: #ffffff; text-decoration: underline; }
+  
+    .header-container{display:flex;align-items:center;justify-content:space-between;width:100%;gap:16px}
+    .header-container .logo a{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:700;color:var(--gold);text-decoration:none}
+    .main-nav ul{list-style:none;display:flex;gap:20px;padding:0;margin:0}
+    .main-nav ul li a{color:#cde8d8;font-size:.9rem;font-weight:500}
+    .main-nav ul li a:hover,.main-nav ul li a.active{color:#fff;text-decoration:none}
+    .header-cta .cta-btn-header{background:var(--gold);color:#fff;padding:8px 18px;border-radius:6px;font-size:.85rem;font-weight:600;white-space:nowrap;text-decoration:none;display:inline-block}
+    .header-cta .cta-btn-header:hover{background:#b8860b;text-decoration:none;color:#fff}
+    @media(max-width:700px){.main-nav{display:none}}
+
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="/">Moqeet Academy</a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/notes/class-9/physics/">Physics Notes</a></li>
+        <li><a href="/notes/class-9/chemistry/">Chemistry Notes</a></li>
+        <li><a href="/notes/class-9/computer-science/" class="active">Computer Science Notes</a></li>
+        <li><a href="/tutoring/">Online Tutoring</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/923315162406" target="_blank" class="cta-btn">Free Trial Class</a>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/">Home</a><span>›</span>
+  <a href="/notes/">Notes</a><span>›</span>
+  <a href="/notes/class-9/">Class 9</a><span>›</span>
+  <a href="/notes/class-9/computer-science/">Computer Science</a><span>›</span>Chapter 6
+</nav>
+
+<div class="page-layout">
+  <main class="main-content">
+    <h1>Class 9 Computer Science Chapter 6 Notes — Impacts of Computing</h1>
+
+    <div class="chapter-overview">
+      <strong>Unit Overview:</strong> This unit examines the wide-ranging impacts of computing on individuals, society, and the economy. Students explore responsible use of hardware and software, ethical issues in digital platforms, the dangers of fake news and cyberbullying, personal privacy in the digital age, and the cultural and economic effects of computing technology.
+    </div>
+
+    <div class="key-topics">
+      <h3>Key Topics Covered</h3>
+      <ul>
+        <li>Responsible Use of Computer Hardware and Software</li>
+        <li>Safe and Ethical Use of Digital Platforms</li>
+        <li>Social Networking: Benefits and Risks</li>
+        <li>Fake News: Dangers and Identification</li>
+        <li>Privacy, Data Security, and Cyberbullying</li>
+        <li>Cultural, Educational, and Economic Impacts of Computing</li>
+      </ul>
+    </div>
+
+    <h2 class="section-heading">Multiple Choice Questions</h2>
+
+    <div class="qa-item">
+      <div class="question">1. What does responsible use of hardware entail?</div>
+      <ul class="mcq-options">
+        <li>A. Using outdated software</li>
+        <li><strong>B. Treating computer equipment with care and respect</strong></li>
+        <li>C. Ignoring software updates</li>
+        <li>D. Sharing passwords with friends</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> B. Treating computer equipment with care and respect<br>
+        <strong>Explanation:</strong> Responsible hardware use involves proper handling, maintenance, and care of physical devices to extend their lifespan and prevent damage.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">2. Which of the following is an example of appropriate use of software?</div>
+      <ul class="mcq-options">
+        <li>A. Downloading and using cracked software</li>
+        <li><strong>B. Regularly updating software to the latest version</strong></li>
+        <li>C. Sharing software licenses with multiple users</li>
+        <li>D. Disabling antivirus software for faster performance</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> B. Regularly updating software to the latest version<br>
+        <strong>Explanation:</strong> Keeping software updated ensures security patches are applied and the software runs correctly within its licensed terms.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">3. Safe use of digital platforms includes:</div>
+      <ul class="mcq-options">
+        <li>A. Sharing personal information with anyone online</li>
+        <li><strong>B. Using strong, unique passwords for each online account</strong></li>
+        <li>C. Downloading files from unknown sources without scanning for malware</li>
+        <li>D. Accepting friend requests from strangers without verifying their identity</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> B. Using strong, unique passwords for each online account<br>
+        <strong>Explanation:</strong> Strong, unique passwords are a key security practice to protect digital accounts from unauthorized access.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">4. Which of the following is an example of inappropriate software use?</div>
+      <ul class="mcq-options">
+        <li>A. Using licensed software for personal projects</li>
+        <li>B. Respecting software copyrights and licenses</li>
+        <li><strong>C. Modifying software code without permission from the developer</strong></li>
+        <li>D. Updating software regularly to improve its performance</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> C. Modifying software code without permission from the developer<br>
+        <strong>Explanation:</strong> Altering software code without authorization violates the developer's intellectual property rights and the software license agreement.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">5. Which of the following is a potentially harmful effect of social networking?</div>
+      <ul class="mcq-options">
+        <li>A. Promoting social awareness and activism</li>
+        <li><strong>B. Facilitating cyberbullying and harassment</strong></li>
+        <li>C. Fostering online community engagement</li>
+        <li>D. Enhancing critical thinking skills</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> B. Facilitating cyberbullying and harassment<br>
+        <strong>Explanation:</strong> Social networking platforms can be misused to bully and harass others, which is a major harmful consequence of these tools.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">6. How can fake news be harmful in the context of computing innovations?</div>
+      <ul class="mcq-options">
+        <li>A. It encourages fact-checking and critical thinking</li>
+        <li><strong>B. It can manipulate public opinion and spread misinformation</strong></li>
+        <li>C. It fosters trust in credible news sources</li>
+        <li>D. It has no impact on society</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> B. It can manipulate public opinion and spread misinformation<br>
+        <strong>Explanation:</strong> Fake news leverages digital platforms to spread rapidly, misleading the public, distorting facts, and influencing decisions and beliefs.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">7. In what way can social networking platforms positively impact businesses as entrepreneurs?</div>
+      <ul class="mcq-options">
+        <li>A. By decreasing the reach and visibility of businesses</li>
+        <li>B. By limiting customer engagement and feedback</li>
+        <li><strong>C. By providing a platform for marketing, customer engagement, and networking</strong></li>
+        <li>D. By increasing operational costs and inefficiencies</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> C. By providing a platform for marketing, customer engagement, and networking<br>
+        <strong>Explanation:</strong> Social media platforms give businesses a low-cost, high-reach channel to market products, interact with customers, and build professional connections.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">8. What is one potential beneficial effect of social networking platforms?</div>
+      <ul class="mcq-options">
+        <li>A. Enhanced personal privacy</li>
+        <li>B. Improved offline communication skills</li>
+        <li><strong>C. Increased connectivity and networking opportunities</strong></li>
+        <li>D. Reduced exposure to diverse viewpoints</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> C. Increased connectivity and networking opportunities<br>
+        <strong>Explanation:</strong> Social networking breaks geographical barriers, connecting people worldwide and opening opportunities for professional and personal relationships.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">9. What is an ethical concern related to computing?</div>
+      <ul class="mcq-options">
+        <li>A. Increased accessibility to information</li>
+        <li>B. Enhanced cyber security measures</li>
+        <li><strong>C. Privacy breaches and data misuse</strong></li>
+        <li>D. Improved healthcare through telemedicine</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> C. Privacy breaches and data misuse<br>
+        <strong>Explanation:</strong> A key ethical concern in computing is the unauthorized access, collection, or misuse of personal data, which violates user privacy rights.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">10. What is the cultural impact of computing?</div>
+      <ul class="mcq-options">
+        <li><strong>A. Preservation of traditional cultural practices and customs</strong></li>
+        <li>B. Homogenization of global culture with a single dominant culture</li>
+        <li>C. Elimination of the need for cultural preservation efforts</li>
+        <li>D. Reduced cultural diversity and innovation</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> A. Preservation of traditional cultural practices and customs<br>
+        <strong>Explanation:</strong> Digital platforms allow communities to archive, share, and promote their traditions, languages, and heritage, helping preserve cultural diversity.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">11. How does computing contribute to economic practices?</div>
+      <ul class="mcq-options">
+        <li>A. It increases manual labor jobs</li>
+        <li>B. It has no impact on job markets</li>
+        <li><strong>C. It automates tasks, leading to job displacement but also creating new job opportunities</strong></li>
+        <li>D. It primarily benefits large corporations, neglecting small businesses</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> C. It automates tasks, leading to job displacement but also creating new job opportunities<br>
+        <strong>Explanation:</strong> Computing automates repetitive roles but simultaneously generates new technology-based careers and industries.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">12. Which of the following is a personal benefit of computing in healthcare?</div>
+      <ul class="mcq-options">
+        <li>A. Reduced access to medical information</li>
+        <li>B. Increased medical errors</li>
+        <li><strong>C. Improved healthcare records and accessibility</strong></li>
+        <li>D. Lower healthcare costs</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> C. Improved healthcare records and accessibility<br>
+        <strong>Explanation:</strong> Digital health systems allow accurate, accessible medical records, making it easier for patients and doctors to manage health information efficiently.
+      </div>
+    </div>
+
+    <div class="premium-card">
+      <span class="premium-badge">SLO-Based • Designed for 95%+ Marks</span>
+      <h3>Want Detailed Premium Notes for Computer Science?</h3>
+      <p>Premium notes include full theory, solved questions step-by-step, SLO-based content, key definitions, and exam preparation tips. One free sample available. Contact on WhatsApp.</p>
+      <a href="https://wa.me/923081156642" class="premium-btn" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20" fill="currentColor">
+              <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+          </svg>
+          Get Free Sample — Premium Notes
+      </a>
+    </div>
+
+    <h2 class="section-heading">Short Questions</h2>
+
+    <div class="qa-item">
+      <div class="question">Q1: Illustrate the responsible use of computer hardware by an individual.</div>
+      <div class="answer">
+        Using computer hardware responsibly means treating devices with care to avoid damage. Key practices include:
+        <ul>
+          <li><strong>Regular Maintenance:</strong> Cleaning and dusting devices to keep them running smoothly.</li>
+          <li><strong>Proper Environment:</strong> Using hardware in areas with good ventilation and appropriate temperature control.</li>
+          <li><strong>Data Backup:</strong> Regularly backing up important data to prevent loss from hardware failure.</li>
+          <li><strong>Safe Disposal:</strong> Disposing of electronic waste responsibly to protect the environment.</li>
+          <li><strong>Physical Care:</strong> Avoiding drops, spills, and rough handling to extend device lifespan.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q2: What does appropriate software use entail?</div>
+      <div class="answer">
+        Using software appropriately means following the rules set by software licenses and copyrights. It involves:
+        <ul>
+          <li><strong>Using Legitimate Copies:</strong> Always purchasing or obtaining software from authorized sources to avoid piracy.</li>
+          <li><strong>Respecting Terms of Service:</strong> Using software only for its intended purpose as defined by the developer.</li>
+          <li><strong>Regular Updates:</strong> Keeping software updated regularly for better security and performance.</li>
+          <li><strong>No Unauthorized Modification:</strong> Refraining from altering software code without the developer's permission.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q3: How do you stay safe while conducting data searches online?</div>
+      <div class="answer">
+        To stay safe while browsing online:
+        <ul>
+          <li><strong>Use Trustworthy Websites:</strong> Only access secure, reputable websites (look for HTTPS).</li>
+          <li><strong>Avoid Suspicious Links:</strong> Do not click on unverified links or pop-up ads.</li>
+          <li><strong>Keep Antivirus Active:</strong> Maintain updated antivirus software to detect threats.</li>
+          <li><strong>Protect Personal Information:</strong> Never share sensitive data on untrusted platforms.</li>
+          <li><strong>Use Privacy Tools:</strong> Consider VPNs to protect online activities from tracking.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q4: Extract and enlist some key aspects of responsible social networking.</div>
+      <div class="answer">
+        Responsible social networking involves:
+        <ul>
+          <li>Protecting personal information and privacy settings.</li>
+          <li>Being mindful of the content shared and its potential consequences.</li>
+          <li>Respecting others' privacy and intellectual property.</li>
+          <li>Verifying information before sharing or reposting to avoid spreading misinformation.</li>
+          <li>Reporting inappropriate or harmful content to platform moderators.</li>
+          <li>Setting boundaries and managing screen time effectively.</li>
+          <li>Being cautious in online interactions, especially with strangers.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q5: Sketch the positive impacts of social networking in today's society.</div>
+      <div class="answer">
+        Social networking has several positive impacts, including:
+        <ul>
+          <li><strong>Global Connectivity:</strong> Enhanced communication across geographical boundaries.</li>
+          <li><strong>Access to Information:</strong> Increased access to diverse information and perspectives.</li>
+          <li><strong>Social Activism:</strong> Facilitation of social movements and awareness campaigns.</li>
+          <li><strong>Professional Networking:</strong> Opportunities for career advancement and professional growth.</li>
+          <li><strong>Community Support:</strong> Support for mental health and well-being through online communities.</li>
+          <li><strong>Creative Collaboration:</strong> Platforms for creativity, expression, and group projects.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q6: Relate fake news affecting our understanding of current events.</div>
+      <div class="answer">
+        Fake news distorts public understanding of important issues by spreading incorrect information that shapes opinions and choices. It erodes trust in credible news sources, creates confusion, and deepens divisions within society. As a result, people may take misguided actions, struggle to make informed decisions, and have less clarity about what is actually happening in the world. Digital platforms accelerate its spread, making it reach millions before corrections can be issued.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q7: Summarize some of the adverse effects of social networking.</div>
+      <div class="answer">
+        Social networking has several negative effects, including:
+        <ul>
+          <li><strong>Cyberbullying:</strong> Harassment and bullying that impacts mental health.</li>
+          <li><strong>Addiction:</strong> Excessive use leading to anxiety, depression, and reduced productivity.</li>
+          <li><strong>Privacy Risks:</strong> Exposure of personal data to third parties or hackers.</li>
+          <li><strong>Misinformation:</strong> Rapid spread of false or misleading content.</li>
+          <li><strong>Reduced Productivity:</strong> Time wasted on platforms affecting academic and work performance.</li>
+          <li><strong>Self-Esteem Issues:</strong> Curated online personas creating unrealistic comparisons.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q8: Interpret the dangers associated with the spread of fake news online.</div>
+      <div class="answer">
+        Fake news spreads misinformation, misleading the public and distorting their understanding of reality. Key dangers include:
+        <ul>
+          <li><strong>Erosion of Trust:</strong> People lose trust in reliable institutions and credible media sources.</li>
+          <li><strong>Social Division:</strong> False narratives deepen political and societal polarization.</li>
+          <li><strong>Manipulation:</strong> Public opinion and election outcomes can be unfairly influenced.</li>
+          <li><strong>Vulnerability to Scams:</strong> People become more susceptible to propaganda and online fraud.</li>
+          <li><strong>Health Risks:</strong> Medical misinformation can lead to harmful health decisions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q9: Examine the computing influence on personal privacy.</div>
+      <div class="answer">
+        Computing has both positive and negative impacts on privacy:
+        <ul>
+          <li><strong>Positive Influences:</strong> Encryption, secure communication tools, and privacy-focused technologies allow users to control their data and communicate safely.</li>
+          <li><strong>Negative Influences:</strong> Data breaches, surveillance systems, and misuse of personal information by companies for targeted advertising increase the risk of identity theft and violation of privacy rights.</li>
+        </ul>
+        Balancing technology with strong data protection laws is essential to safeguard personal privacy.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q10: Criticize the role computing plays in shaping educational practices.</div>
+      <div class="answer">
+        Computing has transformed education by enabling online learning, global collaboration, and access to vast information resources. However, it also has drawbacks:
+        <ul>
+          <li><strong>Over-Reliance:</strong> Dependence on technology can diminish critical thinking and creativity.</li>
+          <li><strong>Plagiarism:</strong> Easy access to online content promotes academic dishonesty.</li>
+          <li><strong>Digital Divide:</strong> Students without access to devices or internet are disadvantaged.</li>
+          <li><strong>Reduced Engagement:</strong> Screen-based learning can reduce face-to-face classroom interaction.</li>
+        </ul>
+        A balanced approach — combining technology with traditional methods — produces the best educational outcomes.
+      </div>
+    </div>
+
+    <h2 class="section-heading">Long Questions</h2>
+
+    <div class="qa-item">
+      <div class="question">Q1: Identify the precautions that need to be taken to ensure the physical safety of computer hardware.</div>
+      <div class="answer">
+        <p>To ensure the physical safety of computer hardware, users must follow specific precautions that protect devices from damage and extend their lifespan:</p>
+        <ul>
+          <li><strong>Proper Placement:</strong> Position hardware on stable, flat surfaces, away from direct sunlight, excessive heat, or moisture.</li>
+          <li><strong>Protection from Dust:</strong> Use dust covers for computers, monitors, and keyboards when not in use. Clean regularly with microfiber cloths or compressed air.</li>
+          <li><strong>Overheating Prevention:</strong> Maintain adequate ventilation around devices. Ensure cooling fans and vents remain unobstructed.</li>
+          <li><strong>Safe Handling:</strong> Handle components like monitors, CPUs, and hard drives carefully. Always grip hardware by its edges and avoid touching sensitive circuit boards.</li>
+          <li><strong>Power Protection:</strong> Use surge protectors to shield against voltage spikes. Avoid disconnecting devices abruptly during use.</li>
+          <li><strong>Prevention of Liquid Damage:</strong> Keep food and drinks away from computers to prevent spills that could harm internal components.</li>
+          <li><strong>Cable Management:</strong> Organize and secure cables to minimize tripping hazards and accidental disconnections.</li>
+          <li><strong>Proper Storage:</strong> Store hardware components in cool, dry locations when not in use. Protect sensitive parts from magnetic fields.</li>
+        </ul>
+        <p>By following these precautions, users can ensure the longevity and reliability of their computer hardware while minimizing the risk of physical damage.</p>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q2: Judge the meaning of using software legally and ethically.</div>
+      <div class="answer">
+        <p>Using software legally and ethically involves adhering to the rules established by the software's creators, ensuring it is utilized in a fair, honest, and responsible manner.</p>
+        <p><strong>Legal Use of Software:</strong></p>
+        <ul>
+          <li><strong>Purchasing or Licensing:</strong> Only use software that has been lawfully purchased or obtained, following the terms of use provided by the creator.</li>
+          <li><strong>Avoiding Piracy:</strong> Refrain from downloading, copying, or distributing software without the necessary license or permission.</li>
+          <li><strong>Respecting Intellectual Property:</strong> Recognize that software is the intellectual property of its creators and should not be stolen or misappropriated.</li>
+        </ul>
+        <p><strong>Ethical Use of Software:</strong></p>
+        <ul>
+          <li><strong>Using for Intended Purposes:</strong> Employ software in ways that align with its designated purpose, avoiding exploitation for harmful or illegal activities.</li>
+          <li><strong>Avoiding Misuse:</strong> Do not use software to harm others, including hacking, spreading malware, or cyberbullying.</li>
+          <li><strong>Promoting Fairness:</strong> Share software only in permitted ways and encourage others to also use it legally and ethically.</li>
+        </ul>
+        <p>Using software legally and ethically respects creators, avoids legal consequences, and promotes a fair digital environment that encourages continued innovation.</p>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q3: Express the ways users can recognize and protect themselves from online cheats and phishing attempts.</div>
+      <div class="answer">
+        <p><strong>Ways to Identify Online Scams and Phishing Attempts:</strong></p>
+        <ul>
+          <li><strong>Suspicious Emails and Messages:</strong> Phishing attempts often appear as emails from trusted sources requesting sensitive information like passwords or bank details.</li>
+          <li><strong>Urgency or Fear Tactics:</strong> Scammers create urgency by claiming accounts will be locked or prizes will expire if you do not act immediately.</li>
+          <li><strong>Unusual Links or Attachments:</strong> Phishing emails may include links to fraudulent websites or dangerous attachments.</li>
+          <li><strong>Too-Good-To-Be-True Offers:</strong> Be wary of promises of rewards, gifts, or lottery winnings.</li>
+          <li><strong>Incorrect Details:</strong> Watch for spelling errors, grammar mistakes, or unusual email addresses that reputable companies would not use.</li>
+        </ul>
+        <p><strong>Ways to Protect Against Phishing:</strong></p>
+        <ul>
+          <li><strong>Verify the Sender:</strong> Always confirm the sender's email address or phone number from a legitimate source before responding.</li>
+          <li><strong>Avoid Suspicious Links:</strong> Hover over links to preview their destination before clicking.</li>
+          <li><strong>Enable Two-Factor Authentication (2FA):</strong> Add an extra layer of security to all important accounts.</li>
+          <li><strong>Create Strong Passwords:</strong> Develop unique, robust passwords for each account and update them regularly.</li>
+          <li><strong>Use Antivirus Software:</strong> Protect devices with effective antivirus and firewall software.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q4: Comment on the key ways social networking platforms have revolutionized communication and connectivity. Deduce the positive impacts on society.</div>
+      <div class="answer">
+        <p>Social networking platforms like Facebook, Instagram, and WhatsApp have fundamentally transformed how people communicate and stay connected worldwide.</p>
+        <p><strong>Key ways these platforms revolutionized communication:</strong></p>
+        <ul>
+          <li><strong>Instant Communication:</strong> Real-time messaging, video calls, and status updates allow immediate connections with family and friends anywhere in the world.</li>
+          <li><strong>Global Connectivity:</strong> Social media breaks down geographical barriers, creating a truly global community.</li>
+          <li><strong>Platform for Expression:</strong> Individuals can freely share opinions, showcase creativity, and participate in public discourse.</li>
+          <li><strong>Access to Information:</strong> Rapid dissemination of news and updates keeps individuals informed about global events.</li>
+        </ul>
+        <p><strong>Positive Impacts on Society:</strong></p>
+        <ul>
+          <li><strong>Strengthening Relationships:</strong> Social networking makes maintaining distant relationships easier and more frequent.</li>
+          <li><strong>Educational Opportunities:</strong> Students access study groups, expert knowledge, and learning resources online.</li>
+          <li><strong>Community Building:</strong> Shared-interest groups foster collaboration and mutual understanding.</li>
+          <li><strong>Social Awareness:</strong> Platforms serve as powerful tools for raising awareness and motivating action for important causes.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q5: Describe the risks associated with online gaming and social networking for children.</div>
+      <div class="answer">
+        <p><strong>Risks Associated with Online Gaming:</strong></p>
+        <ul>
+          <li><strong>Cyberbullying:</strong> Children may encounter rude or hurtful behavior from other players, negatively impacting their emotional well-being.</li>
+          <li><strong>Inappropriate Content:</strong> Some games feature violence, strong language, or material unsuitable for children.</li>
+          <li><strong>Addiction:</strong> Excessive gaming leads to neglect of academics, physical activity, and sleep.</li>
+          <li><strong>Privacy Risks:</strong> Sharing personal information in games with chat functions exposes children to strangers with malicious intentions.</li>
+          <li><strong>In-Game Purchases:</strong> Many games encourage spending real money on virtual items, causing financial difficulties.</li>
+        </ul>
+        <p><strong>Risks Associated with Social Networking:</strong></p>
+        <ul>
+          <li><strong>Stranger Danger:</strong> Children may connect with people who have harmful intentions, risking online grooming or exploitation.</li>
+          <li><strong>Cyberbullying:</strong> Social platforms are frequently misused to spread harmful messages, rumors, or threats.</li>
+          <li><strong>Privacy Concerns:</strong> Children may overshare personal information like their location or school.</li>
+          <li><strong>Exposure to Inappropriate Content:</strong> Social media can expose children to age-inappropriate material or misinformation.</li>
+          <li><strong>Mental Health Issues:</strong> Comparing themselves to others online can adversely affect children's self-esteem and mental health.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q6: What steps can Governments and Businesses take to leverage computing to drive economic growth and innovation?</div>
+      <div class="answer">
+        <p>Governments and businesses can use computing technologies to boost economic growth and encourage innovation through the following strategies:</p>
+        <ul>
+          <li><strong>Enhance Internet Accessibility:</strong> Governments should ensure high-speed, affordable internet is universally available to connect businesses and individuals.</li>
+          <li><strong>Invest in Education and Skills Development:</strong> Schools should teach computer skills and businesses should provide employee technology training.</li>
+          <li><strong>Support Emerging Tech Startups:</strong> Providing grants or loans to small tech firms encourages innovation and job creation.</li>
+          <li><strong>Develop Smart Infrastructure:</strong> Using technology to improve public services like transportation, electricity, and healthcare delivery.</li>
+          <li><strong>Encourage Research and Innovation:</strong> Funding research into AI, renewable energy, and other emerging technologies.</li>
+          <li><strong>Implement E-Government Services:</strong> Making government services available online simplifies processes and saves citizens time.</li>
+          <li><strong>Promote E-Commerce:</strong> Supporting businesses to sell online expands their market reach to global customers.</li>
+          <li><strong>Prioritize Cybersecurity:</strong> Protecting personal information and securing systems builds public trust in digital services.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q7: Compare the impact of online platforms and algorithms on cultural diversity and the spread of global or local culture.</div>
+      <div class="answer">
+        <p><strong>Positive Impacts on Cultural Diversity:</strong></p>
+        <ul>
+          <li><strong>Access to Diverse Content:</strong> Online platforms let people discover music, art, and traditions from around the world.</li>
+          <li><strong>Empowering Local Creators:</strong> Algorithms can promote trending local content, giving small creators a chance to share their culture globally.</li>
+          <li><strong>Preservation of Culture:</strong> Digital platforms allow communities to archive and share endangered languages and traditions.</li>
+        </ul>
+        <p><strong>Negative Impacts on Cultural Diversity:</strong></p>
+        <ul>
+          <li><strong>Algorithmic Bias:</strong> Algorithms prioritize globally popular content over local cultural expressions, promoting cultural homogenization.</li>
+          <li><strong>Filter Bubbles:</strong> Content recommendation systems limit exposure to new or diverse cultures by showing users only what they already like.</li>
+          <li><strong>Commercialization of Culture:</strong> Some platforms reduce cultural expressions to marketable trends, stripping away their original meaning.</li>
+        </ul>
+        <p><strong>Balancing the Impact:</strong> Platforms can design algorithms to include underrepresented cultures. Governments and organizations can support content creation in local languages and encourage cultural education online to maintain a healthy balance between global connectivity and local representation.</p>
+      </div>
+    </div>
+
+    <div class="exam-tip">
+      <h4>⭐ Exam Preparation Tips</h4>
+      <p>Be ready to explain the <strong>responsible use of hardware and software</strong> with examples, discuss the <strong>positive and negative impacts of social networking</strong>, identify how to recognize and avoid <strong>phishing attacks</strong>, and describe the <strong>cultural, economic, and educational impacts of computing</strong>. Long questions often ask you to compare or contrast two aspects — always use bullet points and clear headings.</p>
+    </div>
+
+    <div class="cta-box pdf">
+      <h3>📥 Get Chapter 6 Solved PDF Bundle</h3>
+      <p>Download comprehensive print-ready study reference sheets containing SLO testing guidelines, complete unit summaries, and mock question verification sheets directly via WhatsApp.</p>
+      <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; color: #166534;">Price: Rs 70</p>
+      <a href="https://wa.me/923315162406?text=Assalam%20o%20Alaikum!%20I%20want%20to%20download%20Class%209%20Computer%20Science%20Chapter%206%20Notes%20PDF." class="cta-btn" target="_blank">💬 Connect via WhatsApp</a>
+    </div>
+
+    <nav class="chapter-nav" aria-label="Chapter navigation">
+      <a href="/notes/class-9/computer-science/chapter-5/" class="nav-btn">← Chapter 5: Applications of Computer Science</a>
+      <a href="/notes/class-9/computer-science/chapter-7/" class="nav-btn">Chapter 7: Entrepreneurship →</a>
+    </nav>
+  </main>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>Computer Science Syllabus</h4>
+      <ul class="chapter-list">
+        <li><a href="/notes/class-9/computer-science/chapter-1/">Chapter 1: Computer Systems</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-2/">Chapter 2: Computational Thinking &amp; Algorithms</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-3/">Chapter 3: Programming Fundamentals</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-4/">Chapter 4: Data and Analysis</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-5/">Chapter 5: Applications of Computer Science</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-6/" class="active">Chapter 6: Impacts of Computing</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-7/">Chapter 7: Entrepreneurship</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h4>Need Help?</h4>
+      <p style="font-size:0.88rem; margin-bottom:10px;">Message us on WhatsApp for printable notes, direct PDF downloads, or to book a free live tutoring trial session.</p>
+      <a href="https://wa.me/923315162406" class="sidebar-wa" target="_blank">💬 WhatsApp Us Now</a>
+    </div>
+
+    <div class="sidebar-card">
+      <h4>Other Subjects</h4>
+      <ul class="chapter-list">
+        <li><a href="/notes/class-9/physics/">Physics Notes</a></li>
+        <li><a href="/notes/class-9/chemistry/">Chemistry Notes</a></li>
+        <li><a href="/tutoring/">Online Tutoring</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<a href="https://wa.me/923315162406" class="float-wa" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+<footer class="site-footer">
+  <p>© <span class="current-year"></span> Moqeet Academy. All rights reserved. | <a href='/faq/'>FAQ</a> | <a href='/privacy-policy/'>Privacy Policy</a> | <a href='/contact/'>Contact</a></p>
+</footer>
+
+</body>
+</html>

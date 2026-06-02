@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Moqeet Academy for free notes, premium PDFs, and online tutoring. WhatsApp +923315162406">
+  <title>Contact Us | Moqeet Academy</title>
+  <link rel="canonical" href="https://moqeet.com/contact/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root {
+      --green: #006d5b;
+      --dark-green: #004d3f;
+      --gold: #f59e0b;
+      --bg: #f8fffe;
+      --text: #1f2937;
+      --light-green: #f0fdf4;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Header ── */
+    .site-header { background: var(--green); color: #fff; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.15); }
+    .header-container { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 16px; }
+    .header-container .logo a { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--gold); text-decoration: none; }
+    .main-nav ul { list-style: none; display: flex; gap: 20px; padding: 0; margin: 0; }
+    .main-nav ul li a { color: #cde8d8; font-size: .9rem; font-weight: 500; text-decoration: none; }
+    .main-nav ul li a:hover, .main-nav ul li a.active { color: #fff; }
+    .header-cta a { background: var(--gold); color: #fff; padding: 8px 18px; border-radius: 6px; font-size: .85rem; font-weight: 600; white-space: nowrap; text-decoration: none; }
+    @media(max-width:700px) { .main-nav { display: none; } }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb { background: var(--light-green); padding: 10px 32px; font-size: .82rem; color: #555; border-bottom: 1px solid var(--border); }
+    .breadcrumb a { color: var(--green); }
+    .breadcrumb span { margin: 0 6px; color: #aaa; }
+
+    /* ── Hero ── */
+    .contact-hero {
+      background: linear-gradient(135deg, var(--green) 0%, #00897b 100%);
+      color: #fff;
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    .contact-hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .contact-hero p {
+      font-size: 1.1rem;
+      color: #c8e6d4;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ── Main Layout ── */
+    .contact-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 56px 24px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 48px;
+      align-items: start;
+    }
+    @media(max-width: 860px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Info Panel ── */
+    .info-panel h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.7rem;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+    .info-panel > p {
+      color: #4b5563;
+      margin-bottom: 28px;
+      font-size: .97rem;
+    }
+    .info-panel ul {
+      list-style: none;
+      margin-bottom: 36px;
+    }
+    .info-panel ul li {
+      padding: 8px 0 8px 28px;
+      position: relative;
+      font-size: .95rem;
+      color: #374151;
+      border-bottom: 1px solid var(--border);
+    }
+    .info-panel ul li:last-child { border: none; }
+    .info-panel ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    /* Contact method cards */
+    .method-cards { display: flex; flex-direction: column; gap: 14px; }
+    .method-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.04);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .method-card:hover { box-shadow: 0 6px 20px rgba(0,109,91,.12); transform: translateY(-2px); }
+    .method-icon {
+      font-size: 1.8rem;
+      width: 48px;
+      height: 48px;
+      background: var(--light-green);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .method-card .method-body h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1rem;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+    .method-card .method-body p { font-size: .88rem; color: #6b7280; margin: 0; }
+    .method-card .method-body a { color: var(--green); font-weight: 600; }
+
+    /* ── Form Panel ── */
+    .form-panel {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,.06);
+    }
+    .form-panel h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      color: var(--green);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--light-green);
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      font-size: .88rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 7px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: .95rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: #fafafa;
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(0,109,91,.1);
+      background: #fff;
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .submit-btn {
+      width: 100%;
+      background: #25D366;
+      color: #fff;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background .2s, transform .2s;
+    }
+    .submit-btn:hover { background: #1ebe59; transform: translateY(-1px); }
+
+    /* ── FAQ Preview ── */
+    .faq-preview-section {
+      background: var(--light-green);
+      padding: 56px 24px;
+    }
+    .faq-preview-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .faq-preview-inner h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.8rem;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .faq-preview-inner > p {
+      color: #4b5563;
+      margin-bottom: 36px;
+    }
+    .faq-accordion { text-align: left; margin-bottom: 28px; }
+    .faq-item-acc {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq-item-acc summary {
+      padding: 16px 20px;
+      font-weight: 600;
+      color: var(--green);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .97rem;
+    }
+    .faq-item-acc summary::-webkit-details-marker { display: none; }
+    .faq-item-acc summary::after {
+      content: '+';
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--green);
+      transition: transform .3s;
+      flex-shrink: 0;
+    }
+    .faq-item-acc[open] summary::after { content: '−'; }
+    .faq-item-acc .faq-body {
+      padding: 0 20px 16px;
+      font-size: .95rem;
+      color: #4b5563;
+      line-height: 1.7;
+      border-top: 1px solid var(--border);
+    }
+    .view-faq-btn {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .95rem;
+      transition: background .2s;
+    }
+    .view-faq-btn:hover { background: var(--dark-green); text-decoration: none; color: #fff; }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: #0d3d30;
+      color: #a7c4b5;
+      padding: 48px 24px 0;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    @media(max-width: 860px) {
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width: 540px) {
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+    .footer-brand .footer-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .footer-brand p {
+      font-size: .88rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.9);
+    }
+    .footer-col h4 {
+      font-family: 'Fraunces', serif;
+      color: #fff;
+      font-size: .95rem;
+      margin-bottom: 14px;
+      letter-spacing: .02em;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a {
+      color: #fff;
+      font-size: .88rem;
+      transition: color .2s;
+      text-decoration: none;
+    }
+    .footer-col ul li a:hover { color: var(--gold); text-decoration: none; }
+    .footer-col p { font-size: .88rem; color: #fff; margin-bottom: 6px; }
+    .footer-col a { color: #fff; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .footer-bottom p { font-size: .8rem; color: rgba(255,255,255,0.85); }
+    .footer-bottom a { color: rgba(255,255,255,0.85); }
+    .footer-bottom a:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo"><a href="/">Moqeet Academy</a></div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/notes/">Notes</a></li>
+        <li><a href="/premium-notes/">Premium Notes</a></li>
+        <li><a href="/tutoring/">Tutoring</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/contact/" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/923315162406" target="_blank">Free Trial Class</a>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb">
+  <a href="/">Home</a><span>›</span> Contact
+</nav>
+
+<!-- Hero -->
+<section class="contact-hero">
+  <h1>Contact Moqeet Academy</h1>
+  <p>Get in touch for notes, tutoring, or any questions — we reply fast!</p>
+</section>
+
+<!-- Main Contact Section -->
+<section class="contact-section">
+  <div class="contact-grid">
+
+    <!-- Left: Info -->
+    <div class="info-panel">
+      <h2>Get In Touch</h2>
+      <p>We're here to help you with your studies. Contact us for:</p>
+      <ul>
+        <li>PDF downloads (Physics, Chemistry, Computer Science)</li>
+        <li>Free premium notes sample</li>
+        <li>Online tutoring bookings &amp; free trial</li>
+        <li>Questions about any topic or chapter</li>
+        <li>Feedback and suggestions</li>
+      </ul>
+
+      <div class="method-cards">
+        <div class="method-card">
+          <div class="method-icon">💬</div>
+          <div class="method-body">
+            <h3>WhatsApp (Fastest)</h3>
+            <p><a href="https://wa.me/923315162406" target="_blank" rel="noopener">+92 331 5162406</a> — instant PDF delivery &amp; quick replies</p>
+          </div>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">⏰</div>
+          <div class="method-body">
+            <h3>Response Time</h3>
+            <p>Usually within 1–2 hours · Available <strong>9 AM – 10 PM</strong> daily</p>
+          </div>
+        </div>
+        <div class="method-card">
+          <div class="method-icon">🌐</div>
+          <div class="method-body">
+            <h3>Website</h3>
+            <p><a href="https://moqeet.com">moqeet.com</a> — browse all free notes online anytime</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="form-panel">
+      <h2>Send a Message</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="pdf-download">PDF Download</option>
+            <option value="premium-notes">Premium Notes</option>
+            <option value="tutoring">Online Tutoring</option>
+            <option value="question">Question About Topic</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.863-9.83 0-2.628-1.02-5.1-2.871-6.955C16.612 1.963 14.14.94 11.517.94c-5.432 0-9.855 4.414-9.858 9.831-.001 1.742.469 3.442 1.36 4.965l-.946 3.454 3.574-.936z"/></svg>
+          Send Message via WhatsApp
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ Preview with Accordion -->
+<section class="faq-preview-section">
+  <div class="faq-preview-inner">
+    <h2>Frequently Asked Questions</h2>
+    <p>Quick answers to the most common questions</p>
+
+    <div class="faq-accordion">
+      <details class="faq-item-acc">
+        <summary>How do I get PDF notes?</summary>
+        <div class="faq-body">Contact us on WhatsApp with the chapter name. Pay Rs 50 per chapter or Rs 350 for complete book. You'll receive the PDF instantly after payment.</div>
+      </details>
+      <details class="faq-item-acc">
+        <summary>Is online tutoring available?</summary>
+        <div class="faq-body">Yes! We offer 1-to-1 online tutoring for all subjects. A free 30-minute trial session is available. Contact us on WhatsApp to schedule yours.</div>
+      </details>
+      <details class="faq-item-acc">
+        <summary>Are the notes free to read?</summary>
+        <div class="faq-body">Yes, you can read all exercise solutions online for free — no registration needed. PDF downloads and premium notes are paid services.</div>
+      </details>
+    </div>
+
+    <a href="/faq/" class="view-faq-btn">View All FAQs →</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Moqeet Academy</span>
+      <p>Free Class 9 &amp; 10 notes for Physics, Chemistry, and Computer Science. NBF syllabus aligned for FBISE, Punjab Board, and all Pakistan students.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/notes/">Free Notes</a></li>
+        <li><a href="/premium-notes/">Premium Notes</a></li>
+        <li><a href="/tutoring/">Online Tutoring</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Subjects</h4>
+      <ul>
+        <li><a href="/notes/class-9/physics/">Physics Notes</a></li>
+        <li><a href="/notes/class-9/chemistry/">Chemistry Notes</a></li>
+        <li><a href="/notes/class-9/computer-science/">Computer Science</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>💬 <a href="https://wa.me/923315162406" target="_blank">+92 331 5162406</a></p>
+      <p>🌐 <a href="https://moqeet.com">moqeet.com</a></p>
+      <ul style="margin-top:10px;">
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/contact/">Contact Form</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span class="current-year"></span> Moqeet Academy. All rights reserved.</p>
+    <p>NBF Syllabus · FBISE · Punjab Board · All Pakistan</p>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name    = document.getElementById('name').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    const text    = `Assalam o Alaikum! My name is ${name}. Subject: ${subject}. Message: ${message}`;
+    window.open('https://wa.me/923315162406?text=' + encodeURIComponent(text), '_blank');
+  });
+</script>
+</body>
+</html>

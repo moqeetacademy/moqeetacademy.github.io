@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 9 Computer Science Chapter 2 Notes — Computational Thinking & Algorithms | Moqeet Academy</title>
+  <meta name="description" content="Free Class 9 Computer Science Chapter 2 Notes on Computational Thinking and Algorithms. Includes solved MCQs, short questions, and long exercises according to the new curriculum framework.">
+  <link rel="canonical" href="https://moqeet.com/notes/class-9/computer-science/chapter-2/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Class 9 Computer Science Chapter 2 Notes — Computational Thinking & Algorithms",
+    "description": "Comprehensive solved study guide for Class 9 Computer Science Chapter 2. Features fully explained MCQs, analytical short notes, and detailed long exercises on problem decomposition, IPO models, and algorithm design.",
+    "author": {"@type": "Organization", "name": "Moqeet Online Academy"},
+    "publisher": {"@type": "Organization", "name": "Moqeet Online Academy", "url": "https://moqeet.com"},
+    "educationalLevel": "Grade 9",
+    "about": "Computational Thinking and Problem Solving",
+    "inLanguage": "en"
+  }
+  </script>
+  <style>
+    :root {
+      --green: #1B4332;
+      --gold: #D4A017;
+      --bg: #FDFAF5;
+      --text: #1a1a1a;
+      --light-green: #e8f5ef;
+      --border: #d5e8dd;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .site-header {
+      background: var(--green);
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,.15);
+    }
+    .site-header .logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .header-wa {
+      background: var(--gold);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: .85rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .breadcrumb {
+      background: var(--light-green);
+      padding: 10px 24px;
+      font-size: .82rem;
+      color: #555;
+      border-bottom: 1px solid var(--border);
+    }
+    .breadcrumb a {
+      color: var(--green);
+    }
+    .breadcrumb span {
+      margin: 0 6px;
+    }
+    .page-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 32px;
+    }
+    @media (max-width: 860px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        display: none;
+      }
+    }
+    .main-content h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.9rem;
+      color: var(--green);
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+    .chapter-overview {
+      background: var(--light-green);
+      border-left: 4px solid var(--green);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 24px;
+      font-size: .97rem;
+    }
+    .key-topics {
+      margin-bottom: 28px;
+    }
+    .key-topics h3 {
+      font-family: 'Fraunces', serif;
+      color: var(--green);
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+    .key-topics ul {
+      padding-left: 20px;
+    }
+    .key-topics li {
+      margin-bottom: 5px;
+      font-size: .95rem;
+    }
+    .section-heading {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      color: var(--green);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 8px;
+      margin: 32px 0 18px;
+    }
+    .qa-item {
+      margin-bottom: 22px;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .qa-item .question {
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 8px;
+      font-size: .97rem;
+    }
+    .qa-item .answer {
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+    .qa-item .mcq-options {
+      margin: 10px 0;
+      list-style: none;
+      padding-left: 5px;
+    }
+    .qa-item .mcq-options li {
+      margin-bottom: 6px;
+    }
+    .qa-item .explanation {
+      margin-top: 10px;
+      font-size: 0.88rem;
+      color: #555;
+      background: #fdfaf4;
+      padding: 8px 12px;
+      border-left: 3px solid var(--gold);
+    }
+    .qa-item .answer ul, .qa-item .answer ol {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+    .qa-item .answer li {
+      margin-bottom: 4px;
+    }
+    .qa-item .answer p {
+      margin-bottom: 8px;
+    }
+    .notes-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: .9rem;
+    }
+    .notes-table th {
+      background: var(--green);
+      color: #fff;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    .notes-table td {
+      padding: 12px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .notes-table tr:nth-child(even) {
+      background: var(--light-green);
+    }
+    .exam-tip {
+      background: #fff8e7;
+      border: 2px solid var(--gold);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 32px 0;
+    }
+    .exam-tip h4 {
+      color: var(--gold);
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+    .cta-box{border-radius:12px;padding:28px;margin:32px 0;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.06);border:2px solid transparent}
+    .cta-box.pdf{background:#f0fdf4;border-color:#86efac;color:#1f2937}
+    .cta-box.premium{background:#fffbeb;border-color:#fde047;color:#1f2937}
+    .cta-box h3{font-family:'Fraunces',serif;font-size:1.35rem;margin-bottom:12px;color:#166534}
+    .cta-box.premium h3{color:#854d0e}
+    .cta-box p{font-size:1rem;color:#374151 !important;margin-bottom:20px;line-height:1.6}
+    .cta-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#f59e0b;color:#fff;padding:14px 32px;border-radius:8px;font-weight:700;font-size:1.05rem;transition:transform 0.2s, background 0.2s;text-decoration:none;border:none;cursor:pointer}
+    .cta-btn:hover{transform:translateY(-2px);background:#d97706;color:#fff;text-decoration:none}
+    .chapter-nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 36px 0 16px;
+      gap: 12px;
+    }
+    .nav-btn {
+      background: var(--light-green);
+      border: 1px solid var(--border);
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--green);
+      flex: 1;
+      text-align: center;
+    }
+    .nav-btn:hover {
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+    }
+    .sidebar {
+      position: sticky;
+      top: 80px;
+      height: fit-content;
+    }
+    .sidebar-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+    .sidebar-card h4 {
+      font-family: 'Fraunces', serif;
+      color: var(--green);
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+    .chapter-list {
+      list-style: none;
+      padding: 0;
+    }
+    .chapter-list li {
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .chapter-list li:last-child {
+      border: none;
+    }
+    .chapter-list a {
+      display: block;
+      padding: 7px 4px;
+      font-size: .88rem;
+      color: #444;
+    }
+    .chapter-list a:hover {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .chapter-list a.active {
+      color: var(--green);
+      font-weight: 700;
+    }
+    .sidebar-wa {
+      display: block;
+      background: #25D366;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .9rem;
+      margin-top: 4px;
+    }
+    .float-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: #fff;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      z-index: 999;
+      box-shadow: 0 4px 16px rgba(37,211,102,.4);
+      text-decoration: none;
+    }
+    .site-footer { background: #0f2920; color: #ffffff; text-align: center; padding: 20px 15px; font-size: 0.95rem; margin-top: 48px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .site-footer a { color: #f8d161; text-decoration: none; }
+.site-footer a:hover { color: #ffffff; text-decoration: underline; }
+  
+    .header-container{display:flex;align-items:center;justify-content:space-between;width:100%;gap:16px}
+    .header-container .logo a{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:700;color:var(--gold);text-decoration:none}
+    .main-nav ul{list-style:none;display:flex;gap:20px;padding:0;margin:0}
+    .main-nav ul li a{color:#cde8d8;font-size:.9rem;font-weight:500}
+    .main-nav ul li a:hover,.main-nav ul li a.active{color:#fff;text-decoration:none}
+    .header-cta .cta-btn-header{background:var(--gold);color:#fff;padding:8px 18px;border-radius:6px;font-size:.85rem;font-weight:600;white-space:nowrap;text-decoration:none;display:inline-block}
+    .header-cta .cta-btn-header:hover{background:#b8860b;text-decoration:none;color:#fff}
+    @media(max-width:700px){.main-nav{display:none}}
+
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="/">Moqeet Academy</a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/notes/class-9/physics/">Physics Notes</a></li>
+        <li><a href="/notes/class-9/chemistry/">Chemistry Notes</a></li>
+        <li><a href="/notes/class-9/computer-science/" class="active">Computer Science Notes</a></li>
+        <li><a href="/tutoring/">Online Tutoring</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/923315162406" target="_blank" class="cta-btn">Free Trial Class</a>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/">Home</a><span>›</span>
+  <a href="/notes/">Notes</a><span>›</span>
+  <a href="/notes/class-9/">Class 9</a><span>›</span>
+  <a href="/notes/class-9/computer-science/">Computer Science</a><span>›</span>Chapter 2</nav>
+
+<div class="page-layout">
+  <main class="main-content">
+    <h1>Class 9 Computer Science Chapter 2 Notes — Computational Thinking & Algorithms</h1>
+
+    <div class="chapter-overview">
+      <strong>Unit Overview:</strong> This module details the core elements of problem identification, computational logic patterns, and systems design engineering. Students will learn the sequential steps to process real-world requirements into systematic machine workflows using the Input-Processing-Output (I-P-O) model, alongside structural algorithmic decomposition techniques like Abstraction, Pattern Recognition, and Decomposition.
+    </div>
+
+    <div class="key-topics">
+      <h3>Key Topics Covered</h3>
+      <ul>
+        <li>Differentiating Simple vs. Complex Problems</li>
+        <li>Core Structural Dimensions of Computing Problems (Counting, Searching, Decisions)</li>
+        <li>The Input-Processing-Output (I-P-O) Architectural Models</li>
+        <li>The Four Fundamental Pillars of Computational Thinking</li>
+        <li>Analytical Combinatorics and Combinatoric System Space Calculations</li>
+        <li>System Design Strategy and Program Testing Frameworks</li>
+      </ul>
+    </div>
+
+    
+<h2 class="section-heading">Multiple Choice Questions</h2>
+
+    <div class="qa-item">
+      <div class="question">1. For a problem we face in real-world situations, what steps do we follow in what sequence?</div>
+      <ul class="mcq-options">
+        <li>a) I, II, III</li>
+        <li>b) II, III, I</li>
+        <li>c) III, II, I</li>
+        <li><strong>d) II, I, III</strong></li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> d) II, I, III <br>
+        <strong>Explanation:</strong> In problem-solving, the correct order is first to understand the real-world problem (II), then make some solution (I), and finally instruct the computer to behave accordingly (III). This sequence is essential to ensure the solution meets the problem's requirements.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">2. The following are types of computing problems:<br>I. Counting Problems<br>II. Search Problems<br>III. Decision Problem</div>
+      <ul class="mcq-options">
+        <li>a) I and II</li>
+        <li>b) I and III</li>
+        <li>c) II and III</li>
+        <li><strong>d) I, II and III</strong></li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> d) I and II and III <br>
+        <strong>Explanation:</strong> The book categorizes computing problems into counting, search, and decision problems. Counting problems deal with calculations, search problems focus on finding specific items, and decision problems involve making choices.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">3. Computational thinking is:</div>
+      <ul class="mcq-options">
+        <li>a) Programming</li>
+        <li>b) Thinking like a computer</li>
+        <li>c) Coding</li>
+        <li><strong>d) Logically solving problems</strong></li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> d) Logically solving problems <br>
+        <strong>Explanation:</strong> Computational thinking involves approaching problems systematically and logically, which includes breaking down complex issues into manageable parts, identifying patterns, and creating step-by-step solutions, rather than merely programming or coding.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">4. To solve Search problems, we need to:</div>
+      <ul class="mcq-options">
+        <li>a) Provide the moves.</li>
+        <li>b) Provide start state.</li>
+        <li>c) Provide the end state.</li>
+        <li><strong>d) a, b and c</strong></li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> d) a, b and c <br>
+        <strong>Explanation:</strong> Solving search problems involves defining the moves (rules for navigating through states), a start state (where to begin), and an end state (goal to achieve). This approach ensures a clear pathway from start to goal.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">5. The eight queens puzzle is the problem of:</div>
+      <ul class="mcq-options">
+        <li>a) Sorting</li>
+        <li><strong>b) Searching</strong></li>
+        <li>c) Counting</li>
+        <li>d) Both a and b</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> b) Searching <br>
+        <strong>Explanation:</strong> The eight-queens puzzle is a classic example of a search problem. The objective is to find a way to place eight queens on a chessboard so that no two queens threaten each other. This involves searching for all possible solutions.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">6. Finding the location of the element with a given value is a:</div>
+      <ul class="mcq-options">
+        <li><strong>a) Search</strong></li>
+        <li>b) Traversal</li>
+        <li>c) Sorting</li>
+        <li>d) None of the above</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> a) Search <br>
+        <strong>Explanation:</strong> Searching is locating a specific element with a given value within a data structure. Traversal and sorting are related but differ in focus—traversal examines each element while sorting arranges elements in order.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">7. In IPO charts, we have:</div>
+      <ul class="mcq-options">
+        <li>a) Input, Plan, Output</li>
+        <li>b) Input, Program, Output</li>
+        <li><strong>c) Input, Process, Output</strong></li>
+        <li>d) Input, Produce, Output</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> c) Input, Process, Output <br>
+        <strong>Explanation:</strong> IPO (Input, Process, Output) is a model for problem-solving that highlights how input data is processed to produce an output. This model is widely used in computational thinking and systems design.
+      </div>
+    </div>
+
+    <div class="premium-card">
+    <span class="premium-badge">SLO-Based • Designed for 95%+ Marks</span>
+    <h3>Want Detailed Premium Notes for Computer Science?</h3>
+    <p>Premium notes include full theory, solved equations of motion step-by-step, SLO-based content, graph drawing techniques, and exam preparation tips. One free sample available. contact on WhatsApp.</p>
+    <a href="https://wa.me/923081156642" class="premium-btn" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20" fill="currentColor">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+        Get Free Sample — Premium Notes
+    </a>
+</div>
+
+<h2 class="section-heading">Short Questions</h2>
+
+    <div class="qa-item">
+      <div class="question">Question # 1: What is the major difference between solving simple and complex problems?</div>
+      <div class="answer">Simple problems are straightforward and don’t take much time to solve. They usually need just a few clear steps. For example, adding two numbers is a simple problem. Complex problems are much harder and often must be broken down into smaller, manageable parts. Imagine trying to design a website; it has many pieces, like the layout, colors, and links, which require planning and organizing.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 2: Why do software designers prefer to use IPO charts?</div>
+      <div class="answer">IPO charts (Input, Process, Output) help software designers see the entire process. They show what data (input) is needed, how the data is handled (process), and what the outcome should be (output). By organizing ideas this way, designers can plan their work more effectively, making sure each part of the program does what it’s supposed to.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 3: Differentiate between Computational thinking and Logical thinking.</div>
+      <div class="answer">Computational thinking is like thinking in steps to solve a problem, as a computer would do. It involves breaking a problem into parts, finding patterns, and creating clear steps to get a solution. Logical thinking is broader—it’s about using reasoning to solve problems but doesn't necessarily involve breaking it into steps. For instance, logically thinking through a puzzle is different from creating a step-by-step process to program a game.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 4: Write four properties of Computational thinking.</div>
+      <div class="answer">
+        The four main properties of computational thinking are:
+        <ul>
+          <li><strong>Decomposition</strong> - Breaking down a complex problem into smaller pieces.</li>
+          <li><strong>Pattern Recognition</strong> - Finding similarities within problems, which can make it easier to solve them.</li>
+          <li><strong>Abstraction</strong> - Focusing on the important details and ignoring the unimportant ones.</li>
+          <li><strong>Algorithm Design</strong> - Creating a set of rules or steps to solve the problem.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 5: What are the methods used to design a solution?</div>
+      <div class="answer">To design a solution, you start by understanding the problem deeply. Next, you make a plan, which may involve breaking down the problem or drawing a flowchart. Finally, after creating the solution, you test it to make sure it works well and make improvements if needed.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 6: Which Computational thinking technique breaks down the problem into smaller parts?</div>
+      <div class="answer">Decomposition is the technique that helps break down a large or complex problem into smaller, more manageable parts. By tackling each smaller part individually, it becomes easier to understand and solve the whole problem.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 7: Identify 3 computing problems from other subjects that you are studying in your class.</div>
+      <div class="answer">
+        Here are examples of computing problems in other subjects:
+        <ul>
+          <li><strong>Math</strong> - Solving long equations by breaking them down into simpler steps.</li>
+          <li><strong>Science</strong> - Running experiments that need clear instructions and observations.</li>
+          <li><strong>Geography</strong> - Analyzing data, like population statistics, which can involve calculations and data interpretation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 8: Why do we need to think computationally?</div>
+      <div class="answer">Computational thinking helps us solve problems in an organized way. It makes it easier to tackle big challenges by following logical steps, which is useful not only in computer science but also in everyday problem-solving. For example, planning a project or solving a math problem can be done more easily with computational thinking.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 9: The telephone numbers usually have 9 digits. Out of these 9, the first two digits represent the area code and are constant within a given area. The last 7 digits represent the number, and it cannot begin with 0. How many different telephone numbers are possible with a given area code?</div>
+      <div class="answer">With the first two digits fixed as the area code, we only need to find the number of possible combinations for the last 7 digits. Since the first digit of these 7 can be any number from 1 to 9 (9 choices) and each of the remaining 6 digits can be from 0 to 9 (10 choices each), there are 9 million different possible numbers: 9 × 10<sup>6</sup> = 9,000,000.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 10: From city A to city B, there are 4 different roads, and from city B to city C, there are 2 different roads. Identify how many possible routes are there that someone can follow to reach from city A to city C passing by city B.</div>
+      <div class="answer">Since there are 4 possible roads to travel from city A to city B, and for each of those roads, there are 2 possible roads from city B to city C, we multiply the number of choices: 4 × 2 = 8. This means there are 8 different ways to travel from city A to city C through city B.</div>
+    </div>
+
+    <h2 class="section-heading">Long Questions</h2>
+
+    <div class="qa-item">
+      <div class="question">Q1. Identify whether the given problems are Decision Problems, Counting Problems, or Search Problems. Write your answer in front of each problem given below:</div>
+      <div class="answer">
+        <ul>
+          <li><strong>Does a given binary string have an even number of zeros?</strong><br>
+          <em>Answer:</em> This is a <strong>Decision Problem</strong>. A decision problem is one where we simply need a yes or no answer. In this case, we’re only interested in knowing if the binary string has an even number of zeros, without counting each zero or finding all possible counts. It’s a straightforward "yes" or "no" response.</li>
+          <li style="margin-top: 10px;"><strong>Flipping a coin results in Heads or tails. I flip a coin 20 times, how many different sequences of heads and tails are possible?</strong><br>
+          <em>Answer:</em> This is a <strong>Counting Problem</strong>. A counting problem is focused on finding the total number of possibilities. Here, since each flip has two outcomes (heads or tails), and we are flipping the coin 20 times, we calculate the total sequences by raising 2 to the power of 20 (since there are 2 options per flip, repeated 20 times). This shows how many unique sequences of heads and tails can be generated in 20 flips.</li>
+          <li style="margin-top: 10px;"><strong>Does a certain Java program say “yes” to an empty input?</strong><br>
+          <em>Answer:</em> This is a <strong>Decision Problem</strong>. Similar to the binary string question, we are just looking for a "yes" or "no" response from the Java program regarding its behavior with an empty input. Decision problems don’t require detailed steps; they only need an answer that confirms or denies a condition.</li>
+          <li style="margin-top: 10px;"><strong>How many ways can the letters of the word TRIANGLE be arranged?</strong><br>
+          <em>Answer:</em> This is a <strong>Counting Problem</strong>. To solve this, we count all possible arrangements of the letters in "TRIANGLE." Counting problems like this one involve calculating permutations, as each arrangement of the letters represents a unique possibility. We would consider the number of letters and calculate all possible ways to order them.</li>
+          <li style="margin-top: 10px;"><strong>N-queens problem: where the goal is to place eight queens on a chessboard such that no queen attacks any other.</strong><br>
+          <em>Answer:</em> This is a <strong>Search Problem</strong>. In a search problem, we’re looking for a specific arrangement or solution that meets certain criteria. Here, we need to place eight queens on a chessboard so that no two queens threaten each other, meaning no two queens can share the same row, column, or diagonal. The solution involves testing different configurations until we find a safe arrangement, which makes it a search problem.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q2. A student has to take one course in physics, one in science, and one in mathematics. He may choose one of 3 physics courses (P1, P2, P3), one of 2 science courses (S1, S2), and one of 2 mathematics courses (M1, M2). In how many ways can this student select the 3 courses he has to take?</div>
+      <div class="answer">
+        To find out how many ways the student can select one course from each subject, we use the rule of multiplication for counting options across categories.
+        <ul>
+          <li>For physics, there are 3 options: P1, P2, and P3.</li>
+          <li>For science, there are 2 options: S1 and S2.</li>
+          <li>For mathematics, there are also 2 options: M1 and M2.</li>
+        </ul>
+        By multiplying the number of choices for each subject, we get:<br>
+        <strong>3 × 2 × 2 = 12</strong><br><br>
+        This means there are 12 possible combinations of courses the student can select. Each combination is unique, as it involves one course from each subject area. This approach highlights the concept of calculating combinations by multiplying the options available in each category.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q3. Create an IPO chart that will accept the ages of four boys and calculate their total age and average age. The program must display both the total age and the average age.</div>
+      <div class="answer">
+        <p>Below is the structured Input-Processing-Output design framework configuration:</p>
+        <table class="notes-table">
+          <thead>
+            <tr>
+              <th>Input Block</th>
+              <th>Processing Steps</th>
+              <th>Output Block</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Accept the ages of four boys (defined systematically as: <code>Age1</code>, <code>Age2</code>, <code>Age3</code>, and <code>Age4</code>).</td>
+              <td>
+                1. Calculate the total age by adding all individual parameters together:<br>
+                <code>Total Age = Age1 + Age2 + Age3 + Age4</code><br><br>
+                2. Compute the calculated average execution metric by dividing total age by 4:<br>
+                <code>Average Age = Total Age / 4</code>
+              </td>
+              <td>Display both the computed <strong>Total Age</strong> and <strong>Average Age</strong> inside the viewport presentation layout.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top:10px;"><strong>Detailed Logic Explanation:</strong><br>
+        The program systematically takes in four baseline ages. The calculation component sums the attributes up sequentially to isolate the total mass value. It then divides this cumulative sum by the exact input frequency (4) to deduce the mathematical average. Using an IPO chart structures data architecture definitions prior to initiating logic construction phases.</p>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q4. Create an IPO chart of a scenario that allows a user to enter two numbers. The operation to be performed is either addition, subtraction, multiplication, or division, and accordingly, the output should be given to the user.</div>
+      <div class="answer">
+        <table class="notes-table">
+          <thead>
+            <tr>
+              <th>Input Block</th>
+              <th>Processing Steps</th>
+              <th>Output Block</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Accept two parameters (<code>Number1</code> and <code>Number2</code>) and the targeted functional operational mode structure selection string (addition, subtraction, multiplication, division).</td>
+              <td>
+                Evaluate selected operation control string to route execution:<br>
+                <ul>
+                  <li><strong>Addition:</strong> Compute <code>Number1 + Number2</code></li>
+                  <li><strong>Subtraction:</strong> Compute <code>Number1 - Number2</code></li>
+                  <li><strong>Multiplication:</strong> Compute <code>Number1 * Number2</code></li>
+                  <li><strong>Division:</strong> Check if <code>Number2 != 0</code>, then compute <code>Number1 / Number2</code></li>
+                </ul>
+              </td>
+              <td>Present the localized computation result value output directly to the end-user profile.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q5. The child wants to plan a birthday party for their friend. <br>a) Draw an IPO chart of this situation.<br>b) Write down the properties of computational thinking.</div>
+      <div class="answer">
+        <p><strong>a) Event Management IPO Framework Definition:</strong></p>
+        <table class="notes-table">
+          <thead>
+            <tr>
+              <th>Input Block</th>
+              <th>Processing Steps</th>
+              <th>Output Block</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gather dynamic initialization constraints: total guest count, prospective event target date, available currency budget parameters, catering requests, and decoration themes.</td>
+              <td>
+                1. Calculate total expected logistical costs by multiplying catering unit selections against the guest count array.<br>
+                2. Filter structural decoration components to match balance allocations within budget constraints.<br>
+                3. Map calendar schedules relative to chronological time constraints.
+              </td>
+              <td>Generate comprehensive structural schedule detailing guest registries, allocation breakdowns, catering schedules, and decorative profiles.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 15px;"><strong>b) Structural Execution Properties of Computational Thinking Applied to Planning:</strong></p>
+        <ul>
+          <li><strong>Decomposition:</strong> Splitting up the large birthday party planning problem into small standalone segments like managing budgets, arranging invitations, selecting catering options, and managing tracking timelines.</li>
+          <li><strong>Pattern Recognition:</strong> Checking historical data variations across previously managed parties to match common performance metrics, such as identifying standard favorite food configurations or estimating realistic assembly intervals based on historical tracking.</li>
+          <li><strong>Abstraction:</strong> Filtering high-priority configuration frameworks (like matching budget parameters and tracking absolute attendance constraints) while removing non-critical factors.</li>
+          <li><strong>Algorithmic Thinking:</strong> Structuring sequential procedural execution plans detailing steps down to the minute, such as issuing invitations at point <code>T-10 Days</code>, ordering food supplies at <code>T-2 Days</code>, and launching setup arrays on the target day.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exam-tip">
+      <h4>⭐ Exam Preparation Tips</h4>
+      <p>Ensure you can clearly map word problems onto standard <strong>Input-Processing-Output (I-P-O) Matrices</strong>. Pay close attention to calculating permutations using the rule of multiplication for combinatoric structures, as these are highly prioritized across board exams.</p>
+    </div>
+
+    <div class="cta-box pdf">
+      <h3>📥 Get Chapter 2 Solved PDF Bundle</h3>
+      <p>Download comprehensive print-ready study reference sheets containing SLO testing guidelines, complete unit summaries, and mock question verification sheets directly via WhatsApp.</p>
+      <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; color: #166534;">Price: Rs 70</p>
+      <a href="https://wa.me/923315162406?text=Assalam%20o%20Alaikum!%20I%20want%20to%20download%20Class%209%20Computer%20Science%20Chapter%202%20Notes%20PDF." class="cta-btn" target="_blank">💬 Connect via WhatsApp</a>
+    </div>
+
+    <nav class="chapter-nav" aria-label="Chapter navigation">
+      <a href="/notes/class-9/computer-science/chapter-1/" class="nav-btn">← Chapter 1: Computer Systems</a>
+      <a href="/notes/class-9/computer-science/chapter-3/" class="nav-btn">Chapter 3: Programming Fundamentals →</a>
+    </nav>
+  </main>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>Computer Science Syllabus</h4>
+      <ul class="chapter-list">
+        <li><a href="/notes/class-9/computer-science/chapter-1/">Chapter 1: Computer Systems</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-2/" class="active">Chapter 2: Computational Thinking &amp; Algorithms</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-3/">Chapter 3: Programming Fundamentals</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-4/">Chapter 4: Data and Analysis</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-5/">Chapter 5: Applications of Computer Science</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-6/">Chapter 6: Impacts of Computing</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-7/">Chapter 7: Entrepreneurship</a></li>
+      </ul>
+    </div>
+    
+    <div class="sidebar-card">
+      <h4>Need Help?</h4>
+      <p style="font-size:0.88rem; margin-bottom:10px;">Message us on WhatsApp for printable notes, direct PDF downloads, or to book a free live tutoring trial session.</p>
+      <a href="https://wa.me/923315162406" class="sidebar-wa" target="_blank">💬 WhatsApp Us Now</a>
+    </div>
+
+    <div class="sidebar-card">
+      <h4>Other Subjects</h4>
+      <ul class="chapter-list">
+        <li><a href="/notes/class-9/physics/">Physics Notes</a></li>
+        <li><a href="/notes/class-9/chemistry/">Chemistry Notes</a></li>
+        <li><a href="/tutoring/">Online Tutoring</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<a href="https://wa.me/923315162406" class="float-wa" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+<footer class="site-footer">
+  <p>© <span class="current-year"></span> Moqeet Academy. All rights reserved. | <a href='/faq/'>FAQ</a> | <a href='/privacy-policy/'>Privacy Policy</a> | <a href='/contact/'>Contact</a></p>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

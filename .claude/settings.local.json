@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat)",
+      "Bash(chmod +x /tmp/create_physics_chapters.sh)",
+      "Bash(/tmp/create_physics_chapters.sh)",
+      "Bash(chmod +x /tmp/create_computer_chapters.sh)",
+      "Bash(/tmp/create_computer_chapters.sh)",
+      "Bash(grep -v \"^\\\\.$\")",
+      "Read(//tmp/**)",
+      "Bash(python3 -c \"import docx; doc = docx.Document\\('Phy Chap 1.docx'\\); print\\('\\\\n'.join\\([p.text for p in doc.paragraphs[:50]]\\)\\)\")",
+      "Bash(pip3 install *)",
+      "Bash(python3 *)",
+      "Bash(unzip -l \"Phy Chap 1.docx\")",
+      "Bash(unzip -p \"Phy Chap 1.docx\" word/document.xml)",
+      "Bash(grep -v '^[[:space:]]*$')",
+      "Bash(mkdir -p notes/class-9/physics/chapter-2 notes/class-9/physics/chapter-3 notes/class-9/physics/chapter-4)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Asfi\\Desktop\\MoqeetAcademy\\notes\\class-9\\physics\\chapter-2"
+    ]
+  }
+}

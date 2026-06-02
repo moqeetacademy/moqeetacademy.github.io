@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 9 Computer Science Chapter 3 Notes — Programming Fundamentals | Moqeet Academy</title>
+  <meta name="description" content="Free Class 9 Computer Science Chapter 3 Notes on Programming Fundamentals, HTML, CSS, JavaScript, and DOM Manipulation. Fully solved MCQs, short questions, and long exercises.">
+  <link rel="canonical" href="https://moqeet.com/notes/class-9/computer-science/chapter-3/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Class 9 Computer Science Chapter 3 Notes — Programming Fundamentals",
+    "description": "Comprehensive solved study guide for Class 9 Computer Science Chapter 3. Features solved textbook MCQs, detailed short responses, and standard development walkthroughs covering HTML5 structural components, CSS cascade layers, and dynamic JavaScript execution models.",
+    "author": {"@type": "Organization", "name": "Moqeet Online Academy"},
+    "publisher": {"@type": "Organization", "name": "Moqeet Online Academy", "url": "https://moqeet.com"},
+    "educationalLevel": "Grade 9",
+    "about": "Web Development, HTML, CSS, JavaScript, DOM Manipulation",
+    "inLanguage": "en"
+  }
+  </script>
+  <style>
+    :root {
+      --green: #1B4332;
+      --gold: #D4A017;
+      --bg: #FDFAF5;
+      --text: #1a1a1a;
+      --light-green: #e8f5ef;
+      --border: #d5e8dd;
+      --code-bg: #2d3748;
+      --code-text: #f7fafc;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .site-header {
+      background: var(--green);
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,.15);
+    }
+    .site-header .logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .header-wa {
+      background: var(--gold);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: .85rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .breadcrumb {
+      background: var(--light-green);
+      padding: 10px 24px;
+      font-size: .82rem;
+      color: #555;
+      border-bottom: 1px solid var(--border);
+    }
+    .breadcrumb a {
+      color: var(--green);
+    }
+    .breadcrumb span {
+      margin: 0 6px;
+    }
+    .page-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 32px;
+    }
+    @media (max-width: 860px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        display: none;
+      }
+    }
+    .main-content h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.9rem;
+      color: var(--green);
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+    .chapter-overview {
+      background: var(--light-green);
+      border-left: 4px solid var(--green);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 24px;
+      font-size: .97rem;
+    }
+    .key-topics {
+      margin-bottom: 28px;
+    }
+    .key-topics h3 {
+      font-family: 'Fraunces', serif;
+      color: var(--green);
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+    .key-topics ul {
+      padding-left: 20px;
+    }
+    .key-topics li {
+      margin-bottom: 5px;
+      font-size: .95rem;
+    }
+    .section-heading {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      color: var(--green);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 8px;
+      margin: 32px 0 18px;
+    }
+    .qa-item {
+      margin-bottom: 22px;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .qa-item .question {
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 8px;
+      font-size: .97rem;
+    }
+    .qa-item .answer {
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+    .qa-item .mcq-options {
+      margin: 10px 0;
+      list-style: none;
+      padding-left: 5px;
+    }
+    .qa-item .mcq-options li {
+      margin-bottom: 6px;
+    }
+    .qa-item .explanation {
+      margin-top: 10px;
+      font-size: 0.88rem;
+      color: #555;
+      background: #fdfaf4;
+      padding: 8px 12px;
+      border-left: 3px solid var(--gold);
+    }
+    .qa-item .answer ul, .qa-item .answer ol {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+    .qa-item .answer li {
+      margin-bottom: 4px;
+    }
+    .qa-item .answer p {
+      margin-bottom: 8px;
+    }
+    code {
+      font-family: Consolas, Monaco, 'Andale Mono', monospace;
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #b91c1c;
+      font-size: 0.9em;
+    }
+    pre {
+      background: var(--code-bg);
+      color: var(--code-text);
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 12px 0;
+      font-family: Consolas, Monaco, 'Andale Mono', monospace;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      border-radius: 0;
+    }
+    .notes-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: .9rem;
+    }
+    .notes-table th {
+      background: var(--green);
+      color: #fff;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    .notes-table td {
+      padding: 12px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .notes-table tr:nth-child(even) {
+      background: var(--light-green);
+    }
+    .exam-tip {
+      background: #fff8e7;
+      border: 2px solid var(--gold);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 32px 0;
+    }
+    .exam-tip h4 {
+      color: var(--gold);
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+    .cta-box{border-radius:12px;padding:28px;margin:32px 0;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.06);border:2px solid transparent}
+    .cta-box.pdf{background:#f0fdf4;border-color:#86efac;color:#1f2937}
+    .cta-box.premium{background:#fffbeb;border-color:#fde047;color:#1f2937}
+    .cta-box h3{font-family:'Fraunces',serif;font-size:1.35rem;margin-bottom:12px;color:#166534}
+    .cta-box.premium h3{color:#854d0e}
+    .cta-box p{font-size:1rem;color:#374151 !important;margin-bottom:20px;line-height:1.6}
+    .cta-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#f59e0b;color:#fff;padding:14px 32px;border-radius:8px;font-weight:700;font-size:1.05rem;transition:transform 0.2s, background 0.2s;text-decoration:none;border:none;cursor:pointer}
+    .cta-btn:hover{transform:translateY(-2px);background:#d97706;color:#fff;text-decoration:none}
+    .chapter-nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 36px 0 16px;
+      gap: 12px;
+    }
+    .nav-btn {
+      background: var(--light-green);
+      border: 1px solid var(--border);
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--green);
+      flex: 1;
+      text-align: center;
+    }
+    .nav-btn:hover {
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+    }
+    .sidebar {
+      position: sticky;
+      top: 80px;
+      height: fit-content;
+    }
+    .sidebar-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+    .sidebar-card h4 {
+      font-family: 'Fraunces', serif;
+      color: var(--green);
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+    .chapter-list {
+      list-style: none;
+      padding: 0;
+    }
+    .chapter-list li {
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .chapter-list li:last-child {
+      border: none;
+    }
+    .chapter-list a {
+      display: block;
+      padding: 7px 4px;
+      font-size: .88rem;
+      color: #444;
+    }
+    .chapter-list a:hover {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .chapter-list a.active {
+      color: var(--green);
+      font-weight: 700;
+    }
+    .sidebar-wa {
+      display: block;
+      background: #25D366;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .9rem;
+      margin-top: 4px;
+    }
+    .float-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: #fff;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      z-index: 999;
+      box-shadow: 0 4px 16px rgba(37,211,102,.4);
+      text-decoration: none;
+    }
+    .site-footer { background: #0f2920; color: #ffffff; text-align: center; padding: 20px 15px; font-size: 0.95rem; margin-top: 48px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .site-footer a { color: #f8d161; text-decoration: none; }
+.site-footer a:hover { color: #ffffff; text-decoration: underline; }
+  
+    .header-container{display:flex;align-items:center;justify-content:space-between;width:100%;gap:16px}
+    .header-container .logo a{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:700;color:var(--gold);text-decoration:none}
+    .main-nav ul{list-style:none;display:flex;gap:20px;padding:0;margin:0}
+    .main-nav ul li a{color:#cde8d8;font-size:.9rem;font-weight:500}
+    .main-nav ul li a:hover,.main-nav ul li a.active{color:#fff;text-decoration:none}
+    .header-cta .cta-btn-header{background:var(--gold);color:#fff;padding:8px 18px;border-radius:6px;font-size:.85rem;font-weight:600;white-space:nowrap;text-decoration:none;display:inline-block}
+    .header-cta .cta-btn-header:hover{background:#b8860b;text-decoration:none;color:#fff}
+    @media(max-width:700px){.main-nav{display:none}}
+
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="/">Moqeet Academy</a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/notes/class-9/physics/">Physics Notes</a></li>
+        <li><a href="/notes/class-9/chemistry/">Chemistry Notes</a></li>
+        <li><a href="/notes/class-9/computer-science/" class="active">Computer Science Notes</a></li>
+        <li><a href="/tutoring/">Online Tutoring</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/923315162406" target="_blank" class="cta-btn">Free Trial Class</a>
+    </div>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/">Home</a><span>›</span>
+  <a href="/notes/">Notes</a><span>›</span>
+  <a href="/notes/class-9/">Class 9</a><span>›</span>
+  <a href="/notes/class-9/computer-science/">Computer Science</a><span>›</span>Chapter 3</nav>
+
+<div class="page-layout">
+  <main class="main-content">
+    <h1>Class 9 Computer Science Chapter 3 Notes — Programming Fundamentals</h1>
+
+    <div class="chapter-overview">
+      <strong>Unit Overview:</strong> This chapter covers structural web engineering, frontend styling rules, and basic scripting routines. Students learn to use HTML5 semantic tags, create design systems with Cascading Style Sheets (CSS), write functional event-driven JavaScript code, and manipulate page elements using the Document Object Model (DOM).
+    </div>
+
+    <div class="key-topics">
+      <h3>Key Topics Covered</h3>
+      <ul>
+        <li>Web Framework Architecture: Websites vs. Interactive Web Applications</li>
+        <li>HTML Document Flow: Structural tags, Text processing elements, Elements nesting</li>
+        <li>CSS Cascading Architecture: Inline rules, Local styles, and External stylesheets</li>
+        <li>JavaScript Execution Lifecycles: Variables initialization, Event registers, Data typing</li>
+        <li>Document Object Model (DOM): Node lookup patterns, Dynamic mutation, Event handlers</li>
+        <li>Table Compilation Frameworks, Multimedia pipelines, Scrolling text tracks</li>
+      </ul>
+    </div>
+
+    
+<h2 class="section-heading">Multiple Choice Questions</h2>
+
+    <div class="qa-item">
+      <div class="question">1. Everything in HTML is identified based on:</div>
+      <ul class="mcq-options">
+        <li>a) Brackets</li>
+        <li>b) Title</li>
+        <li><strong>c) Tags</strong></li>
+        <li>d) Image</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> c) Tags <br>
+        <strong>Explanation:</strong> In HTML, everything is identified using "tags." Tags help define elements like headings, paragraphs, images, and links, allowing the browser to interpret and display the content correctly.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">2. The output of HTML code is visible in:</div>
+      <ul class="mcq-options">
+        <li>a) Notepad</li>
+        <li>b) File</li>
+        <li><strong>c) Browser</strong></li>
+        <li>d) Spreadsheet</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> c) Browser <br>
+        <strong>Explanation:</strong> HTML code is rendered in a web browser. The browser interprets the HTML code to display the webpage as it is intended to look and function for users.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">3. The name of a web page can be given using _____ tag:</div>
+      <ul class="mcq-options">
+        <li>a) Body</li>
+        <li><strong>b) Title</strong></li>
+        <li>c) Head</li>
+        <li>d) Footer</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> b) Title <br>
+        <strong>Explanation:</strong> The <code>&lt;title&gt;</code> tag is used to define the title of the webpage, which is displayed on the browser tab. It also helps in SEO (Search Engine Optimization) by providing a title for the page in search engine results.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">4. The main parts of a document are arranged in _____ tag:</div>
+      <ul class="mcq-options">
+        <li>a) Head</li>
+        <li>b) Title</li>
+        <li><strong>c) Body</strong></li>
+        <li>d) Line Break</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> c) Body <br>
+        <strong>Explanation:</strong> The <code>&lt;body&gt;</code> tag contains the main content of an HTML document, including text, images, links, tables, and other elements that are displayed on the webpage.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">5. The heading tag-pair for the 5th level heading is:</div>
+      <ul class="mcq-options">
+        <li>a) &lt;h5 .. h5&gt;</li>
+        <li>b) &lt;h5 .. /h5&gt;</li>
+        <li><strong>c) &lt;h5&gt; .. &lt;/h5&gt;</strong></li>
+        <li>d) &lt;h5&gt; .. &lt;h/5&gt;</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> c) &lt;h5&gt; .. &lt;/h5&gt; <br>
+        <strong>Explanation:</strong> The <code>&lt;h5&gt;</code> and <code>&lt;/h5&gt;</code> tags are used for the 5th level of heading in HTML. HTML headings range from <code>&lt;h1&gt;</code> (largest) to <code>&lt;h6&gt;</code> (smallest).
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">6. Span is used to provide _____ to a line:</div>
+      <ul class="mcq-options">
+        <li>a) Font</li>
+        <li>b) Border</li>
+        <li><strong>c) Style</strong></li>
+        <li>d) Color1</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> c) Style <br>
+        <strong>Explanation:</strong> The <code>&lt;span&gt;</code> tag is commonly used to apply styles to a specific section of text without affecting other content.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">7. The first row of the table in HTML is called:</div>
+      <ul class="mcq-options">
+        <li>a) Title row</li>
+        <li><strong>b) Header Row</strong></li>
+        <li>c) Upper Row</li>
+        <li>d) Top Row</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> b) Header Row <br>
+        <strong>Explanation:</strong> The first row in an HTML table is typically defined as the header row using the <code>&lt;th&gt;</code> tag, which stands for "table header." It usually contains labels or headings for each column.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">8. 'p' tag-pair is used for:</div>
+      <ul class="mcq-options">
+        <li>a) Print</li>
+        <li>b) Page align</li>
+        <li>c) Page break</li>
+        <li><strong>d) Paragraph</strong></li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> d) Paragraph <br>
+        <strong>Explanation:</strong> The <code>&lt;p&gt;</code> tag in HTML defines paragraphs. Text within <code>&lt;p&gt;</code> tags is displayed as a separate paragraph on the webpage, with spaces above and below it.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">9. A variable cannot start with a:</div>
+      <ul class="mcq-options">
+        <li>a) Alphabet</li>
+        <li><strong>b) Number</strong></li>
+        <li>c) Character</li>
+        <li>d) String</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> b) Number <br>
+        <strong>Explanation:</strong> In programming, variables must start with a letter or an underscore; they cannot begin with a number. This rule helps avoid confusion with numeric literals.
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">10. The first value assigned to a variable after declaration is called:</div>
+      <ul class="mcq-options">
+        <li>a) Beginning value</li>
+        <li>b) Starting value</li>
+        <li><strong>c) Initialization</strong></li>
+        <li>d) Substitution</li>
+      </ul>
+      <div class="explanation">
+        <strong>Correct Answer:</strong> c) Initialization <br>
+        <strong>Explanation:</strong> Initialization is assigning a starting value to a variable when it is declared, allowing the variable to hold this value for use in the program.
+      </div>
+    </div>
+
+    <div class="premium-card">
+    <span class="premium-badge">SLO-Based • Designed for 95%+ Marks</span>
+    <h3>Want Detailed Premium Notes for Computer Science?</h3>
+    <p>Premium notes include full theory, solved equations of motion step-by-step, SLO-based content, graph drawing techniques, and exam preparation tips. One free sample available. contact on WhatsApp.</p>
+    <a href="https://wa.me/923081156642" class="premium-btn" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20" fill="currentColor">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+        Get Free Sample — Premium Notes
+    </a>
+</div>
+
+<h2 class="section-heading">Short Questions</h2>
+
+    <div class="qa-item">
+      <div class="question">Question # 1: Contrast between website and web application.</div>
+      <div class="answer">
+        <table class="notes-table">
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Website</th>
+              <th>Web Application</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Definition</strong></td>
+              <td>Displays static content.</td>
+              <td>Designed for active user interaction.</td>
+            </tr>
+            <tr>
+              <td><strong>User Interaction</strong></td>
+              <td>Users can only read content, and there is no editing.</td>
+              <td>Users can read and modify data.</td>
+            </tr>
+            <tr>
+              <td><strong>Deployment</strong></td>
+              <td>No recompilation is needed after changes.</td>
+              <td>Requires recompilation before deployment.</td>
+            </tr>
+            <tr>
+              <td><strong>Function Complexity</strong></td>
+              <td>Provides basic and simple functionalities.</td>
+              <td>Supports complex functionalities.</td>
+            </tr>
+            <tr>
+              <td><strong>Interactivity</strong></td>
+              <td>Not interactive for users.</td>
+              <td>Highly interactive for users.</td>
+            </tr>
+            <tr>
+              <td><strong>Browser Capabilities</strong></td>
+              <td>Needs high browser capabilities.</td>
+              <td>Uses high browser capabilities.</td>
+            </tr>
+            <tr>
+              <td><strong>Integration</strong></td>
+              <td>It is easier to integrate due to simplicity.</td>
+              <td>Complex integration due to advanced features.</td>
+            </tr>
+            <tr>
+              <td><strong>Authentication</strong></td>
+              <td>Usually, it does not require authentication.</td>
+              <td>Often requires user authentication.</td>
+            </tr>
+            <tr>
+              <td><strong>Examples</strong></td>
+              <td>News websites, blogs, etc.</td>
+              <td>Amazon, Facebook, etc.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 2: What does 'href' refer to, and how is it used?</div>
+      <div class="answer">
+        <p>The <code>href</code> attribute in HTML stands for <strong>"Hypertext Reference"</strong> and is used to specify the destination URL of a hyperlink.</p>
+        <p><strong>How to Use It:</strong></p>
+        <pre><code>&lt;a href="https://www.example.com"&gt;Click Here&lt;/a&gt;</code></pre>
+        <p><strong>Explanation:</strong></p>
+        <ul>
+          <li><code>&lt;a&gt;</code> is the anchor tag that creates the link.</li>
+          <li><code>href="https://www.example.com"</code> points to the destination address.</li>
+          <li>"Click Here" is the text visible to the user. Clicking it opens the referenced URL.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 3: Enlist the optional parameters to open a webpage.</div>
+      <div class="answer">
+        <p>When using the <code>target</code> attribute in an HTML hyperlink, it specifies how the linked document should open. The common optional parameters are:</p>
+        <ul>
+          <li><code>_self</code>: Opens the linked document in the same window/tab (default behavior).</li>
+          <li><code>_blank</code>: Opens the linked document in a new window or tab.</li>
+          <li><code>_parent</code>: Opens the linked document in the parent frame.</li>
+          <li><code>_top</code>: Opens the linked document in the full body of the window.</li>
+          <li><code>Custom Frame Name</code>: Opens the linked document in a specific named frame.</li>
+        </ul>
+        <p><strong>Example Usage:</strong></p>
+        <pre><code>&lt;a href="https://www.example.com" target="_blank"&gt;Click Here&lt;/a&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 4: List the frequent tags used in the text of a webpage, and what are they used for?</div>
+      <div class="answer">
+        <table class="notes-table">
+          <thead>
+            <tr>
+              <th>Tag-Pair</th>
+              <th>For the Task</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;p&gt;</code></td>
+              <td>Paragraph, sentence structural definition</td>
+            </tr>
+            <tr>
+              <td><code>&lt;b&gt;</code></td>
+              <td>To make characters bold without semantic weight</td>
+            </tr>
+            <tr>
+              <td><code>&lt;i&gt;</code></td>
+              <td>Text is shown in italics for stylistic variation</td>
+            </tr>
+            <tr>
+              <td><code>&lt;em&gt;</code></td>
+              <td>Emphasizes a word with italics semantically</td>
+            </tr>
+            <tr>
+              <td><code>&lt;strong&gt;</code></td>
+              <td>Emphasizes a word with bold for strong importance</td>
+            </tr>
+            <tr>
+              <td><code>&lt;sup&gt;</code></td>
+              <td>Superscript formatting (useful in formulas and footnotes)</td>
+            </tr>
+            <tr>
+              <td><code>&lt;sub&gt;</code></td>
+              <td>Subscript formatting (helpful in chemical formulas)</td>
+            </tr>
+            <tr>
+              <td><code>&lt;u&gt;</code></td>
+              <td>Underlines the text</td>
+            </tr>
+            <tr>
+              <td><code>&lt;small&gt;</code></td>
+              <td>Displays smaller text size, like in side comments and footnotes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 5: Explain the role of the &lt;body&gt; tag-pair in a document.</div>
+      <div class="answer">The <code>&lt;body&gt;</code> tag contains the main structural content of the HTML document, including text, images, links, tables, and scripts visible to the user. All content meant to be displayed on the viewport page must be enclosed within <code>&lt;body&gt;&lt;/body&gt;</code>. It follows immediately after the closure of the <code>&lt;head&gt;</code> tag-pair.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 6: How is event-based code used in JavaScript?</div>
+      <div class="answer">
+        <p>Event-based code in JavaScript creates interactive web pages by executing scripts in response to user actions or system states.</p>
+        <ul>
+          <li><strong>Event Listener Registration:</strong> Uses <code>addEventListener()</code> or inline attributes to attach function calls to elements.</li>
+          <li><strong>Event Handling Function:</strong> Contains logic executed when the target event runs.</li>
+          <li><strong>Common Event Types:</strong> Triggers on user interactions (e.g., <code>click</code>, <code>keypress</code>, <code>mousemove</code>) or lifecycle hooks (e.g., <code>load</code>, <code>submit</code>).</li>
+        </ul>
+        <p><strong>Example:</strong></p>
+        <pre><code>button.onclick = function() {
+    alert('Clicked!');
+};</code></pre>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Question # 7: Infer about External CSS. Where is External CSS generally used?</div>
+      <div class="answer">
+        <p><strong>External CSS:</strong> A styling architecture where design rules are written in a separate standalone document with a <code>.css</code> extension and linked to HTML pages using the <code>&lt;link&gt;</code> tag inside the head section.</p>
+        <p><strong>Primary Use Cases:</strong></p>
+        <ul>
+          <li><strong>Multi-page Management:</strong> Centralizes design tokens for large platforms, ensuring global consistency across pages.</li>
+          <li><strong>Maintainability:</strong> Simplifies changes, since a single update in the external sheet updates all linked documents.</li>
+          <li><strong>Performance Optimization:</strong> Enhances load times because browsers cache the external asset on the first request.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section-heading">Long Questions</h2>
+
+    <div class="qa-item">
+      <div class="question">Q1: What is a Document Object Model (DOM)? Explain with an example.</div>
+      <div class="answer">
+        <p>The <strong>Document Object Model (DOM)</strong> is a cross-platform programming interface for web documents. It models an HTML or XML document as a tree structure where each element, attribute, and text snippet represents a unique object or node. This allows languages like JavaScript to modify the page structure, styles, and content dynamically.</p>
+        <p><strong>Example Document Implementation:</strong></p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;DOM Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Welcome to DOM Example&lt;/h1&gt;
+  &lt;p id="demo"&gt;This is a paragraph.&lt;/p&gt;
+  &lt;button onclick="changeText()"&gt;Click me&lt;/button&gt;
+
+  &lt;script&gt;
+    function changeText() {
+      document.getElementById("demo").innerHTML = "Paragraph changed!";
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <p><strong>Explanation:</strong></p>
+        <ul>
+          <li><strong>HTML Structure:</strong> Contains standard nodes: a heading, a target text node with <code>id="demo"</code>, and an interface action element.</li>
+          <li><strong>DOM Interaction API:</strong> When the user hits the button, JavaScript invokes the <code>changeText()</code> routine. The API method <code>document.getElementById("demo")</code> targets that node and changes its <code>innerHTML</code> value.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q2: Write code to differentiate between different types of headings in HTML.</div>
+      <div class="answer">
+        <p>HTML offers six structured levels of page headings via the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tag-pairs, arranged by order of importance. Below is the implementation example:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Heading Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;This is a level 1 heading&lt;/h1&gt;
+  &lt;h2&gt;This is a level 2 heading&lt;/h2&gt;
+  &lt;h3&gt;This is a level 3 heading&lt;/h3&gt;
+  &lt;h4&gt;This is a level 4 heading&lt;/h4&gt;
+  &lt;h5&gt;This is a level 5 heading&lt;/h5&gt;
+  &lt;h6&gt;This is a level 6 heading&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <p><strong>Structural Breakdown:</strong></p>
+        <ul>
+          <li><code>&lt;h1&gt;</code> marks primary titles and page themes. Only one h1 is recommended per document for semantic clarity.</li>
+          <li><code>&lt;h2&gt;</code> outlines secondary topics, and <code>&lt;h3&gt;</code> through <code>&lt;h6&gt;</code> organize nested sub-sections.</li>
+          <li><strong>SEO and Accessibility impact:</strong> Screen readers and search engine indexers rely on this hierarchical heading structure to parse page content correctly.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q3: Elaborate on Steps and Provide Code to Load a Background Image in a web page?</div>
+      <div class="answer">
+        <p>Loading an optimized background asset requires structured steps spanning image preparation, HTML markup definitions, and standard CSS style constraints.</p>
+        <p><strong>Implementation Strategy Steps:</strong></p>
+        <ol>
+          <li><strong>Image Selection &amp; Processing:</strong> Select an optimal layout asset (JPEG/PNG format) compressed for production web delivery.</li>
+          <li><strong>Path Management:</strong> Save the asset file to your working project directory (e.g., <code>images/bg.jpg</code>).</li>
+          <li><strong>HTML Markup Skeleton:</strong> Construct the base document with standard document structure tags.</li>
+          <li><strong>CSS Binding Layer:</strong> Declare the background attributes on the page body rule block.</li>
+        </ol>
+        <p><strong>Code Solution:</strong></p>
+        <pre><code>&lt;!-- HTML file configuration --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Background Image Example&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <pre><code>/* External style.css implementation file */
+body {
+  background-image: url('path/to/your/image.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}</code></pre>
+        <p><strong>Property Rule Defs:</strong> <code>background-size: cover;</code> stretches the source element file proportionally across the browser window, <code>background-position: center;</code> targets focal points symmetrically, and <code>no-repeat</code> blocks duplication loops.</p>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q4: With the help of sample code, highlight different methods to Incorporate CSS and HTML code into a web page</div>
+      <div class="answer">
+        <p>There are three standard methods to introduce Cascading Style Sheets into web pages, along with modular CSS framework integrations:</p>
+        
+        <p><strong>1. Inline CSS Method</strong><br>Styles are added directly inside the individual element tag using the <code>style</code> attribute. Useful for localized overrides.</p>
+        <pre><code>&lt;h1 style="color: red; font-size: 24px;"&gt;Inline CSS Heading&lt;/h1&gt;</code></pre>
+
+        <p><strong>2. Internal CSS Method</strong><br>Declared inside a centralized <code>&lt;style&gt;</code> block located in the document's <code>&lt;head&gt;</code> region. Best suited for single-page applications.</p>
+        <pre><code>&lt;head&gt;
+  &lt;style&gt;
+    h1 { color: blue; }
+    p { font-size: 18px; }
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+
+        <p><strong>3. External CSS Method (Production Standard)</strong><br>Keeps markup and design cleanly separated by linking a dedicated <code>.css</code> file to the HTML page.</p>
+        <pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+
+        <p><strong>4. CSS Frameworks Integration Method</strong><br>Imports pre-built component sheets (like Bootstrap) via a Content Delivery Network (CDN) to accelerate UI construction.</p>
+        <pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 class="text-danger font-italic"&gt;Bootstrap Framed Heading&lt;/h1&gt;
+&lt;/body&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q5: Sketch Steps and apply Code to provide Border and Color in a Table in the webpage</div>
+      <div class="answer">
+        <p><strong>Implementation Procedure:</strong></p>
+        <ul>
+          <li><strong>Step 1:</strong> Define structural nodes using <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> tags.</li>
+          <li><strong>Step 2:</strong> Organize row content, keeping headers separate from row cell data blocks.</li>
+          <li><strong>Step 3:</strong> Style the table by adding borders, colors, and padding rules via CSS.</li>
+        </ul>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;Styled Table Example&lt;/title&gt;
+  &lt;style&gt;
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      color: #1b4332;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Header 1&lt;/th&gt;
+      &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Data Cell 1&lt;/td&gt;
+      &lt;td&gt;Data Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <p>Using <code>border-collapse: collapse;</code> prevents double-line cell borders, giving the table data a clean layout.</p>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q6: Discuss the functionality JavaScripts can provide in a webpage with the help of a suitable example.</div>
+      <div class="answer">
+        <p>JavaScript provides key frontend capabilities across three major areas:</p>
+
+        <p><strong>1. Interactive Event Handling</strong><br>Allows the webpage to react directly to user inputs and interactions.</p>
+        <pre><code>&lt;button id="btn"&gt;Click Me&lt;/button&gt;
+&lt;script&gt;
+  document.getElementById("btn").addEventListener("click", function() {
+    alert("Button execution complete.");
+  });
+&lt;/script&gt;</code></pre>
+
+        <p><strong>2. Dynamic DOM Manipulation</strong><br>Modifies page structures, content, or element properties on the fly without requiring a full page refresh.</p>
+        <pre><code>&lt;p id="text"&gt;Original Text String&lt;/p&gt;
+&lt;button onclick="mutate()"&gt;Update&lt;/button&gt;
+&lt;script&gt;
+  function mutate() {
+    document.getElementById("text").innerHTML = "DOM node mutates successfully!";
+  }
+&lt;/script&gt;</code></pre>
+
+        <p><strong>3. Client-Side Input Validation</strong><br>Checks user input inside form fields before sending it to the server, reducing unnecessary processing load.</p>
+        <pre><code>&lt;form name="valForm" onsubmit="return validate()"&gt;
+  &lt;input type="text" name="user"&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;
+&lt;script&gt;
+  function validate() {
+    if (document.forms["valForm"]["user"].value == "") {
+      alert("Field cannot be left blank.");
+      return false;
+    }
+  }
+&lt;/script&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q7: Articulate steps and write code to create scrolling text on a webpage.</div>
+      <div class="answer">
+        <p>Horizontal scrolling items can be built using native CSS keyframe pipelines or fine-tuned JavaScript timers.</p>
+
+        <p><strong>Method 1: CSS @keyframes Pipeline Solution</strong></p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    .marquee-box {
+      width: 100%;
+      overflow: hidden;
+      background: #f4f4f4;
+    }
+    .marquee-text {
+      white-space: nowrap;
+      animation: scrollTrack 12s linear infinite;
+    }
+    @keyframes scrollTrack {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="marquee-box"&gt;
+    &lt;div class="marquee-text"&gt;This text continuously scrolls using pure CSS keyframes.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p><strong>Method 2: JavaScript Routine Calculation Solution</strong></p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;div style="width:100%; overflow:hidden;"&gt;
+    &lt;div id="jsMarquee"&gt;Scrolling text managed by JavaScript setTimeout routines.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    var track = document.getElementById("jsMarquee");
+    function runScroll() {
+      track.style.transform = "translateX(" + window.innerWidth + "px)";
+      track.style.transition = "transform 10s linear";
+      setTimeout(function() {
+        track.style.transform = "translateX(-100%)";
+      }, 100);
+    }
+    runScroll();
+    setInterval(runScroll, 10100);
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q8: Enlist steps to add a video clip in a website which starts playing as the web page loads.</div>
+      <div class="answer">
+        <p>To implement an optimized video asset configured for immediate autoplay delivery, execute the following systematic checklist:</p>
+        <ol>
+          <li><strong>Source Encoding Optimization:</strong> Encode video targets into widely compliant formats (such as H.264 MP4 or WebM containers).</li>
+          <li><strong>Bitrate Compression:</strong> Compress media files through utility platforms (e.g., HandBrake) to optimize loading speeds.</li>
+          <li><strong>Server Allocation:</strong> Host file bundles on server pipelines or reliable object stores.</li>
+          <li><strong>HTML Markup Injection:</strong> Embed the <code>&lt;video&gt;</code> element using standard attribute tokens:</li>
+        </ol>
+        <pre><code>&lt;video autoplay muted loop playsinline width="100%" height="auto"&gt;
+  &lt;source src="assets/video/clip.mp4" type="video/mp4"&gt;
+  Your browser does not support the video playback elements.
+&lt;/video&gt;</code></pre>
+        <p><strong>Important Usability Rule:</strong> The <code>muted</code> attribute is required. Modern web browsers block auto-playing videos that have active audio tracks to protect the user experience.</p>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q9: Cite steps for compiling the result of your last examination in a tabular form and displaying it on a webpage.</div>
+      <div class="answer">
+        <p>Follow these structural data configuration steps to build an online grading spreadsheet report:</p>
+        <ul>
+          <li><strong>Step 1: Data Gathering:</strong> Collect candidate score lists, ID maps, and subject metrics.</li>
+          <li><strong>Step 2: Sheet Formatting:</strong> Organize metrics into clean rows and columns using Excel or Google Sheets.</li>
+          <li><strong>Step 3: Export Generation:</strong> Export clean data arrays into manageable system formats (like CSV or JSON structures).</li>
+          <li><strong>Step 4: Table Shell Generation:</strong> Build the document container layout using standard table tags:</li>
+        </ul>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Examination System Matrix&lt;/title&gt;
+  &lt;style&gt;
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+    th { background: #1b4332; color: #fff; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Academic Examination Results&lt;/h1&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Student Name&lt;/th&gt;
+        &lt;th&gt;Roll Reference&lt;/th&gt;
+        &lt;th&gt;Mathematics&lt;/th&gt;
+        &lt;th&gt;Computer Science&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Malik Aayan&lt;/td&gt;
+        &lt;td&gt;CS-09-421&lt;/td&gt;
+        &lt;td&gt;98&lt;/td&gt;
+        &lt;td&gt;95&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="question">Q10: In the context of fig 40 (d) add another button namely ‘Revert’ which when is pressed, it will reverse both the color and index value.</div>
+      <div class="answer">
+        <p>To extend the base code with a <strong>'Revert'</strong> feature, we declare a dedicated <code>revertOrder()</code> function. This function resets the page background color and switches the numeric sequence output back to ascending order.</p>
+        <p><strong>Complete Code Solution:</strong></p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Interactive Loop Controller&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="outputContainer"&gt;&lt;/div&gt;
+
+  &lt;script type="text/javascript"&gt;
+    var index;
+    var targetDiv = document.getElementById("outputContainer");
+
+    // Initial ascending initialization output block 
+    renderAscending("Initial For-Loop Stream Output Execution:");
+
+    function renderAscending(headline) {
+      var contentStr = "&lt;strong&gt;" + headline + "&lt;/strong&gt;&lt;br/&gt;";
+      for (index = 0; index &lt; 10; index++) {
+        contentStr += "Index Sequence No. : " + index + "&lt;br /&gt;";
+      }
+      targetDiv.innerHTML = contentStr;
+    }
+
+    // Interactive button routing operations functions
+    function descOrder() {
+      document.body.style.backgroundColor = "peachpuff";
+      var contentStr = "&lt;strong&gt;Altered Descending Execution Track Array:&lt;/strong&gt;&lt;br/&gt;";
+      for (index = 10; index &gt; 0; index--) {
+        contentStr += "Index Sequence No. : " + index + "&lt;br /&gt;";
+      }
+      targetDiv.innerHTML = contentStr;
+    }
+
+    function revertOrder() {
+      document.body.style.backgroundColor = "white";
+      renderAscending("System State Reverted Symmetrically (Ascending Track):");
+    }
+  &lt;/script&gt;
+
+  &lt;p style="margin-top: 20px;"&gt;Control Framework Triggers:&lt;/p&gt;
+  &lt;button onclick="descOrder()"&gt;Descending Order&lt;/button&gt;
+  &lt;button onclick="revertOrder()"&gt;Revert&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="exam-tip">
+      <h4>⭐ Exam Preparation Tips</h4>
+      <p>Pay close attention to structural coding assignments in the long exercises. Make sure you can write clean code for different types of <strong>HTML Form validations</strong>, correctly set up multi-level table grids, and explain how the browser processes <strong>External CSS files</strong>.</p>
+    </div>
+
+    <div class="cta-box pdf">
+      <h3>📥 Get Chapter 3 Solved PDF Bundle</h3>
+      <p>Download comprehensive print-ready study reference sheets containing SLO testing guidelines, complete unit summaries, and mock question verification sheets directly via WhatsApp.</p>
+      <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; color: #166534;">Price: Rs 70</p>
+      <a href="https://wa.me/923315162406?text=Assalam%20o%20Alaikum!%20I%20want%20to%20download%20Class%209%20Computer%20Science%20Chapter%203%20Notes%20PDF." class="cta-btn" target="_blank">💬 Connect via WhatsApp</a>
+    </div>
+
+    <nav class="chapter-nav" aria-label="Chapter navigation">
+      <a href="/notes/class-9/computer-science/chapter-2/" class="nav-btn">← Chapter 2: Computational Thinking &amp; Algorithms</a>
+      <a href="/notes/class-9/computer-science/chapter-4/" class="nav-btn">Chapter 4: Data and Analysis →</a>
+    </nav>
+  </main>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>Computer Science Syllabus</h4>
+      <ul class="chapter-list">
+        <li><a href="/notes/class-9/computer-science/chapter-1/">Chapter 1: Computer Systems</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-2/">Chapter 2: Computational Thinking &amp; Algorithms</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-3/" class="active">Chapter 3: Programming Fundamentals</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-4/">Chapter 4: Data and Analysis</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-5/">Chapter 5: Applications of Computer Science</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-6/">Chapter 6: Impacts of Computing</a></li>
+        <li><a href="/notes/class-9/computer-science/chapter-7/">Chapter 7: Entrepreneurship</a></li>
+      </ul>
+    </div>
+    
+    <div class="sidebar-card">
+      <h4>Need Help?</h4>
+      <p style="font-size:0.88rem; margin-bottom:10px;">Message us on WhatsApp for printable notes, direct PDF downloads, or to book a free live tutoring trial session.</p>
+      <a href="https://wa.me/923315162406" class="sidebar-wa" target="_blank">💬 WhatsApp Us Now</a>
+    </div>
+
+    <div class="sidebar-card">
+      <h4>Other Subjects</h4>
+      <ul class="chapter-list">
+        <li><a href="/notes/class-9/physics/">Physics Notes</a></li>
+        <li><a href="/notes/class-9/chemistry/">Chemistry Notes</a></li>
+        <li><a href="/tutoring/">Online Tutoring</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<a href="https://wa.me/923315162406" class="float-wa" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+<footer class="site-footer">
+  <p>© <span class="current-year"></span> Moqeet Academy. All rights reserved. | <a href='/faq/'>FAQ</a> | <a href='/privacy-policy/'>Privacy Policy</a> | <a href='/contact/'>Contact</a></p>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

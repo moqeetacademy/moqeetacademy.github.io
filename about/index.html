@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Moqeet Academy — Our Story & Mission | Free NBF Notes Pakistan</title>
+  <meta name="description" content="Discover the story behind Moqeet Academy — how a student frustrated by irrelevant notes became a teacher on a mission to give Pakistani students the best, clearest NBF notes and tutoring." />
+  <link rel="canonical" href="https://moqeet.com/about/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <style>
+    /* About Page Specific Styles */
+    .breadcrumb-bar {
+      background: #f3ebdf;
+      padding: 14px 0;
+      color: #3b3b3b;
+      font-size: 0.95rem;
+    }
+    .breadcrumb-bar a { color: #3b3b3b; text-decoration: none; }
+
+    .about-hero {
+      background-color: #113927;
+      background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(135deg, #113927 0%, #0a2b1b 100%);
+      background-size: 30px 30px, cover;
+      color: white;
+      padding: 120px 0 80px;
+      text-align: center;
+      position: relative;
+    }
+    .about-hero .badge {
+      display: inline-block;
+      background: rgba(212,160,23,0.12);
+      color: #D4A017;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+    .about-hero h1 {
+      font-size: 3.6rem;
+      line-height: 1.05;
+      margin: 0.6rem 0 0.8rem;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      color: white;
+    }
+    .about-hero h1 .accent { color: #D4A017; }
+    .about-hero p {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .about-section {
+      padding: 60px 0;
+    }
+    .about-section h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      color: #1B4332;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .founder-card {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(27, 67, 50, 0.1);
+      flex-wrap: nowrap;
+    }
+    .founder-image {
+      width: 50%;
+      height: auto;
+      min-width: 320px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 3px solid #1B4332;
+    }
+    .founder-info { width: 50%; }
+
+    @media (max-width: 900px) {
+      .founder-card { flex-wrap: wrap; }
+      .founder-info { width: 100%; }
+      .founder-image { width: 100%; min-width: auto; margin-bottom: 1rem; }
+    }
+    .founder-info h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      color: #1B4332;
+      margin-bottom: 0.5rem;
+    }
+    .founder-info .role {
+      font-size: 0.9rem;
+      color: #D4A017;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .founder-info p {
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+    .story-block {
+      margin-bottom: 2rem;
+    }
+    .story-block h3 {
+      font-family: 'Fraunces', serif;
+      color: #1B4332;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .story-block p {
+      color: #4a4a4a;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .pull-quote {
+      background: #1B4332;
+      color: white;
+      padding: 2.5rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      border-left: 4px solid #D4A017;
+    }
+    .pull-quote::before {
+      content: '"';
+      font-size: 3rem;
+      color: rgba(212, 160, 23, 0.3);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .pull-quote-author {
+      font-size: 0.9rem;
+      font-style: normal;
+      margin-top: 1rem;
+      color: #D4A017;
+      font-weight: 600;
+    }
+    .values-section {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .values-section h3 {
+      font-family: 'Fraunces', serif;
+      color: #1B4332;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .values-section p {
+      color: #4a4a4a;
+      line-height: 1.6;
+    }
+    .values-list {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    /* Offers cards */
+    .offers-section {
+      padding: 60px 0;
+    }
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .offer-card {
+      background: #fbf7f0;
+      border: 1px solid rgba(27,67,50,0.06);
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 2px 0 rgba(27,67,50,0.02);
+    }
+    .offer-icon {
+      width: 56px;
+      height: 56px;
+      background: #143a2b;
+      color: #D4A017;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .offer-card h3 { font-family: 'Fraunces', serif; color: #143a2b; margin-bottom: 8px; }
+    .offer-card p { color: #6b6b6b; line-height: 1.7; }
+    .offer-pill { display: inline-block; margin-top: 16px; background: #e9f6ea; color: #1B7a4a; padding: 10px 16px; border-radius: 999px; font-weight:700; }
+    .value-item {
+      padding: 1.5rem;
+      background: white;
+      border-left: 4px solid #D4A017;
+      border-radius: 4px;
+    }
+    .value-item h4 {
+      font-family: 'Fraunces', serif;
+      color: #1B4332;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .value-item p {
+      color: #4a4a4a;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 600px) {
+      .founder-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .founder-image {
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+        margin: 0 auto;
+      }
+      .about-hero h1 {
+        font-size: 1.6rem;
+      }
+      .offers-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- HEADER & NAVIGATION -->
+<header>
+    <nav class="container">
+        <div class="navbar">
+            <a href="/" class="logo">Moqeet <span>Academy</span></a>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/notes/">Notes</a></li>
+                <li><a href="/premium-notes/">Premium Notes</a></li>
+                <li><a href="/tutoring/">Tutoring</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
+        </div>
+    </nav>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <div class="container"> <a href="/">Home</a> &nbsp; › &nbsp; About</div>
+</div>
+
+<!-- ABOUT HERO SECTION -->
+<section class="about-hero">
+  <div class="container">
+    <div class="badge">OUR STORY</div>
+    <h1>Built by a Student.<br>Run for <span class="accent">Every</span> Student.</h1>
+    <p>The mission is simple: stop wasting students' time on irrelevant notes. Give them clear, exam-focused solutions and real tutoring via WhatsApp.</p>
+  </div>
+</section>
+
+<!-- OFFERS SECTION removed from top (moved to page end) -->
+
+<!-- ABOUT CONTENT SECTION -->
+<section class="about-section">
+  <div class="container">
+
+    <!-- Founder Card with Photo -->
+    <div class="founder-card">
+      <img src="/assets/images/Moqeet.webp" alt="Muhammad Moqeet, Founder of Moqeet Academy" class="founder-image">
+      <div class="founder-info">
+        <h3>Muhammad Moqeet</h3>
+        <div class="role">Founder & Lead Educator</div>
+        <p>Teacher, tutor, and lifelong student of the NBF curriculum. Based in Pakistan, serving students across the country via WhatsApp and moqeet.com. I built Moqeet Academy because I remember the frustration of wasting hours on the wrong notes before every exam.</p>
+      </div>
+    </div>
+
+    <!-- Story Block 1 -->
+    <div class="story-block">
+      <h3>The Student Who Was Wasting Time</h3>
+      <p>I still remember sitting at my desk the night before an exam, surrounded by notes I had downloaded from every website I could find. Pages and pages of them. Theory copied word for word from the textbook, information I had already read three times, random content that had nothing to do with the actual exam questions.</p>
+      <p>I was studying hard. But I was not studying smart. Every hour I spent reading irrelevant notes was an hour I was not spending on what actually mattered — the exercise questions, the definitions, the numericals that always showed up in the paper.</p>
+      <p>I was not alone. Every student around me was doing the same thing. We were all busy, but we were busy with the wrong things. Our notes were not helping us — they were drowning us.</p>
+    </div>
+
+    <!-- Pull Quote -->
+    <div class="pull-quote">
+      I was studying for hours every night and still felt unprepared. That is when I realised the problem was not my effort — it was the notes I was using.
+      <div class="pull-quote-author">— Muhammad Moqeet, Founder</div>
+    </div>
+
+    <!-- Story Block 2 -->
+    <div class="story-block">
+      <h3>The Teacher Who Saw the Same Problem</h3>
+      <p>Years later, I became a teacher. And on my very first day of tutoring, I saw the exact same pattern playing out in front of me. My students were struggling — not because they were not working hard, but because the notes available to them were completely wrong for how exams actually work.</p>
+      <p>Some notes were too long, with pages of theory that the board examiner never asks. Some were too vague, skipping the solved numericals entirely. Many were simply copied from textbooks with no added value at all. Others had solutions to exercises from completely different editions or different curricula — not even the NBF syllabus that Punjab Board and FBISE students actually need.</p>
+      <p>Students were downloading files from random Facebook groups, WhatsApp forwards, and sketchy websites. Nobody knew if the solutions were correct. Nobody checked. And students were going into exams trusting notes that had never been verified by anyone who actually understood the subject.</p>
+      <p>I had spent years learning from those mistakes as a student. Now as a teacher, I could not stand watching my students make the same ones.</p>
+    </div>
+
+    <!-- Story Block 3 -->
+    <div class="story-block">
+      <h3>The Decision That Started Everything</h3>
+      <p>So I made a decision. I was going to build something different. Not another collection of copied textbook pages. Not another site stuffed with irrelevant theory. I was going to create notes that do exactly what notes are supposed to do — help students get marks in exams, efficiently, without wasting a single hour.</p>
+      <p>The free notes on Moqeet Academy contain only what you actually need for exercises: MCQs with correct answers, short questions answered clearly, long questions with full explanations, and numericals solved step by step. No filler. No fluff. Every word earns its place on the page.</p>
+      <p>And for students who want to go deeper — who want to understand every SLO, every concept, every detail their teacher might ask about — that is what the premium notes are for. Full chapter theory. Extra questions from inside the chapter. Exam tips. Common mistakes to avoid. Everything a serious student needs to walk into the exam hall with real confidence.</p>
+    </div>
+
+    <!-- Values Section -->
+    <div class="values-section">
+      <h2>What We Believe</h2>
+      <div class="values-list">
+        <div class="value-item">
+          <h4>Clarity over quantity</h4>
+          <p>One perfectly solved numerical is worth more than ten pages of copied textbook theory. We believe in giving students exactly what they need — nothing more, nothing less.</p>
+        </div>
+        <div class="value-item">
+          <h4>NBF syllabus — aligned for every Pakistani student</h4>
+          <p>Our notes are built for the National Book Foundation curriculum — which means they work for FBISE students in Islamabad, Punjab Board students, and any school across Pakistan following NBF textbooks.</p>
+        </div>
+        <div class="value-item">
+          <h4>Free access as a right, not a privilege</h4>
+          <p>Exercise solutions are and will always remain free on this website. Every student in Pakistan deserves access to correct solutions, regardless of what they can afford.</p>
+        </div>
+        <div class="value-item">
+          <h4>Personal connection through WhatsApp</h4>
+          <p>We are not a faceless platform. When you message on WhatsApp, a real person replies — the same teacher who wrote your notes and who genuinely wants you to succeed in your exam.</p>
+        </div>
+        <div class="value-item">
+          <h4>SLO-based premium notes built for real exams</h4>
+          <p>FBISE and Punjab Board exams are tested against Student Learning Outcomes. Our premium notes are structured around each SLO so students never miss a point that the examiner could award marks for.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY WHATSAPP SECTION -->
+<section class="about-section">
+  <div class="container">
+    <h2 style="text-align:center; font-family: 'Fraunces', serif; color:#143a2b;">Why WhatsApp, Not a Fancy App</h2>
+    <div style="max-width:900px; margin:16px auto; color:#4a4a4a; line-height:1.8;">
+      <p>You might wonder — why WhatsApp? Why not a proper app with payments and downloads?</p>
+
+      <p>Because I know how Pakistani students actually live. Not everyone has a credit card. Not everyone's parents are comfortable with online payment portals they have never heard of. But almost every student in Pakistan has WhatsApp. EasyPaisa and JazzCash work everywhere. And a real person replying to your message is more trustworthy than any automated checkout page.</p>
+
+      <p>The small fee for the PDF is not really about the money. It filters serious students from those who are just collecting files they will never open. Every student who pays even a small amount is more likely to actually read the notes. And as a teacher, that matters to me far more than the transaction itself.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERS SECTION -->
+<section class="offers-section">
+  <div class="container">
+    <h2 style="text-align:center; font-family: 'Fraunces', serif; color:#143a2b;">What Moqeet Academy Offers</h2>
+    <p style="text-align:center; color:#6b6b6b; max-width:800px; margin:8px auto 28px;">Three ways we help Pakistani students succeed in Class 9 and Class 10 NBF exams.</p>
+    <div class="offers-grid">
+      <div class="offer-card">
+        <div class="offer-icon">📘</div>
+        <h3>Free Exercise Solutions</h3>
+        <p>MCQs, short questions, long questions, and numericals — all solved and published as readable HTML on the website. Free forever. No account needed.</p>
+        <div class="offer-pill">100% Free Online</div>
+      </div>
+
+      <div class="offer-card">
+        <div class="offer-icon">📄</div>
+        <h3>Premium SLO-Based Notes</h3>
+        <p>Full chapter theory, detailed explanations, SLO-aligned content, solved examples, exam tips, and common mistakes — everything a serious student needs.</p>
+        <div class="offer-pill" style="background:#fff3d9; color:#8a5b13;">PDF via WhatsApp</div>
+      </div>
+
+      <div class="offer-card">
+        <div class="offer-icon">👩‍🏫</div>
+        <h3>1-to-1 Online Tutoring</h3>
+        <p>Personal tutoring for any subject — Physics, Chemistry, Mathematics, Biology, Computer Science, English, Urdu, and more. Flexible timings. Free trial session available.</p>
+        <div class="offer-pill" style="background:#e8edff; color:#3d3fa8;">Book via WhatsApp</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Start Learning?</h2>
+    <p>Browse free chapter notes, download a premium sample, or book your free tutoring trial — all on WhatsApp in minutes.</p>
+    <a href="https://wa.me/923315162406?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Moqeet%20Academy" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">💬 Contact on WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <!-- About Section -->
+      <div class="footer-section">
+        <h3>Moqeet Academy</h3>
+        <p>Free Class 9 and Class 10 notes for Physics, Chemistry, and Computer Science. NBF syllabus aligned for FBISE, Punjab Board, and all Pakistan students.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/notes/">Free Notes</a></li>
+          <li><a href="/premium-notes/">Premium Notes</a></li>
+          <li><a href="/tutoring/">Online Tutoring</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Subjects -->
+      <div class="footer-section">
+        <h3>Subjects</h3>
+        <ul>
+          <li><a href="/notes/class-9/physics/">Physics Notes</a></li>
+          <li><a href="/notes/class-9/chemistry/">Chemistry Notes</a></li>
+          <li><a href="/notes/class-9/computer-science/">Computer Science Notes</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>WhatsApp: <a href="https://wa.me/923315162406" target="_blank" rel="noopener noreferrer">+92 331 5162406</a></p>
+        <p>Website: <a href="https://moqeet.com">moqeet.com</a></p>
+        <p><a href="/contact/">Contact Form</a></p>
+        <p><a href="/privacy-policy/">Privacy Policy</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span class="current-year"></span> Moqeet Academy. All rights reserved. | <a href='/faq/'>FAQ</a> | <a href='/privacy-policy/'>Privacy Policy</a> | <a href='/contact/'>Contact</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
