@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -99,14 +99,7 @@
       grid-template-columns: 1fr 280px;
       gap: 32px;
     }
-    @media (max-width: 860px) {
-      .page-layout {
-        grid-template-columns: 1fr;
-      }
-      .sidebar {
-        display: none;
-      }
-    }
+    @media(max-width:860px){.page-layout{grid-template-columns:1fr} .sidebar{position:static;margin-top:32px}}
     .main-content h1 {
       font-family: 'Fraunces', serif;
       font-size: 1.9rem;
@@ -361,6 +354,20 @@
     .header-cta .cta-btn-header:hover{background:#b8860b;text-decoration:none;color:#fff}
     @media(max-width:700px){.main-nav{display:none}}
 
+  
+    /* Mobile responsive fixes */
+    body { word-wrap: break-word; }
+    img, video { max-width: 100%; height: auto; }
+    .notes-table { display: block; overflow-x: auto; white-space: nowrap; }
+    .solution, pre { overflow-x: auto; }
+    mjx-container { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+    @media(max-width:480px){
+      .site-header{padding:12px 14px}
+      .header-container{gap:8px}
+      .header-container .logo a{font-size:1.15rem}
+      .header-cta .cta-btn-nav{padding:6px 12px;font-size:0.8rem}
+      .page-layout{padding:20px 14px}
+    }
   </style>
 </head>
 <body>

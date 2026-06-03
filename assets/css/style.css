@@ -490,6 +490,7 @@ footer a {
     color: #ffffff;
 }
 
+
 footer a:hover {
     color: #ffffff;
     text-decoration: underline;
@@ -858,6 +859,7 @@ table tr:hover {
     }
 }
 
+
 /* Premium Card Styles */
 .premium-card {
   background: #1B4332;
@@ -930,28 +932,29 @@ table tr:hover {
 
 /* Custom Mobile Responsive Fixes */
 @media (max-width: 768px) {
-    /* 1. Ensure header wraps and behaves cleanly on mobile devices */
-    header, .header, .navbar, .header-container { 
+    header, .header, .header-container { 
         height: auto !important;
-        padding: 10px 15px !important;
+        padding: 15px 10px !important;
         display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
+        flex-direction: column !important;
         align-items: center !important;
-        gap: 10px !important;
+        text-align: center !important;
+        gap: 12px !important;
+    }
+
+    nav, .nav, .nav-links, .navbar-nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px 15px !important;
         width: 100% !important;
-        box-sizing: border-box !important;
     }
 
-    /* 2. Hide long plain text menu links on mobile note pages to match image_033002.png */
-    header a:not(.logo):not(.btn):not(.btn-secondary),
-    .navbar a:not(.logo):not(.btn):not(.btn-secondary),
-    nav a:not(.logo):not(.btn):not(.btn-secondary),
-    .nav-menu li {
-        display: none !important;
+    nav a, .nav-links a, .navbar-nav a {
+        font-size: 14px !important;
+        display: inline-block !important;
     }
 
-    /* 3. Lock full layout elements inside the viewport dimensions */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
