@@ -8,6 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script>
+  var currentPath = window.location.pathname;
+  
+  // If a student lands on the old Chapter 3 URL, send them to the new clean notes path
+  if (currentPath.includes('chapter-3-computer-science')) {
+     window.location.href = "https://moqeet.com/notes/computer-science/chapter-3.html"; // Change to your exact new path
+  } 
+  // If they land on the main old CS page
+  else if (currentPath.includes('computer-science-notes-for-fbise')) {
+     window.location.href = "https://moqeet.com/notes/"; 
+  }
+</script>
 </head>
 <body>
 
