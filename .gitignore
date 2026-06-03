@@ -9,6 +9,10 @@
 /*.ps1
 /*.py
 
+# Maintenance scripts folder
+maintenance-scripts/
+
 # System files
 .DS_Store
 Thumbs.db
+
