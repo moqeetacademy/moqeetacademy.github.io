@@ -929,3 +929,34 @@ table tr:hover {
   display: inline-block;
   vertical-align: middle;
 }
+
+/* Custom Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    header, .header, .header-container { 
+        height: auto !important;
+        padding: 15px 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 12px !important;
+    }
+
+    nav, .nav, .nav-links, .navbar-nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px 15px !important;
+        width: 100% !important;
+    }
+
+    nav a, .nav-links a, .navbar-nav a {
+        font-size: 14px !important;
+        display: inline-block !important;
+    }
+
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+}
