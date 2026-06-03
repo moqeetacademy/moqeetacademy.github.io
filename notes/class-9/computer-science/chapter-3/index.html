@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Class 9 Computer Science Chapter 3 Notes — Programming Fundamentals | Moqeet Academy</title>
-  <meta name="description" content="Free Class 9 Computer Science Chapter 3 notes on Programming Fundamentals, HTML, CSS, and JavaScript with fully solved MCQs and exercises.">>>
+  <meta name="description" content="Free Class 9 Computer Science Chapter 3 notes on Programming Fundamentals, HTML, CSS, and JavaScript with fully solved MCQs and exercises.">
   <link rel="canonical" href="https://moqeet.com/notes/class-9/computer-science/chapter-3/">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -99,7 +99,7 @@
       grid-template-columns: 1fr 280px;
       gap: 32px;
     }
-    @media(max-width:860px){.page-layout{grid-template-columns:1fr} .sidebar{position:static;margin-top:32px}}
+    @media(max-width:1024px){.page-layout{grid-template-columns:1fr} .sidebar{position:static;margin-top:32px}}
     .main-content h1 {
       font-family: 'Fraunces', serif;
       font-size: 1.9rem;
@@ -352,10 +352,64 @@
     .main-nav ul li a:hover,.main-nav ul li a.active{color:#fff;text-decoration:none}
     .header-cta .cta-btn-header{background:var(--gold);color:#fff;padding:8px 18px;border-radius:6px;font-size:.85rem;font-weight:600;white-space:nowrap;text-decoration:none;display:inline-block}
     .header-cta .cta-btn-header:hover{background:#b8860b;text-decoration:none;color:#fff}
-    @media(max-width:700px){.main-nav{display:none}}
+   .hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-direction: column;
+  gap: 5px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+@media(max-width:700px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--green);
+    flex-direction: column;
+    padding: 12px 0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    z-index: 200;
+  }
+  .main-nav.open {
+    display: block;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  .main-nav ul li a {
+    display: block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .hamburger {
+    display: flex;
+  }
+  .header-cta {
+    display: none;
+  }
+  .site-header {
+    position: relative;
+  }
+}
 
   
     /* Mobile responsive fixes */
+    .main-content { min-width: 0; }
     body { word-wrap: break-word; }
     img, video { max-width: 100%; height: auto; }
     .notes-table { display: block; overflow-x: auto; white-space: nowrap; }
@@ -377,7 +431,7 @@
     <div class="logo">
       <a href="/">Moqeet Academy</a>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav" id="mainNav">
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/notes/class-9/physics/">Physics Notes</a></li>
@@ -389,6 +443,11 @@
     <div class="header-cta">
       <a href="https://wa.me/923315162406" target="_blank" class="cta-btn">Free Trial Class</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </header>
 
@@ -588,7 +647,7 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>Definition</strong><div class="definition-box"></div><div class="definition-box"></td>
+              <td><strong>Definition</strong></td>
               <td>Displays static content.</td>
               <td>Designed for active user interaction.</td>
             </tr>
@@ -640,7 +699,7 @@
     <div class="qa-item">
       <div class="question">Question # 2: What does 'href' refer to, and how is it used?</div>
       <div class="answer">
-        <p>The <code>href</code> attribute in HTML stands for <strong>"Hypertext Reference"</strong> and is used to specify the destination URL of a hyperlink.</div></p>
+        <p>The <code>href</code> attribute in HTML stands for <strong>"Hypertext Reference"</strong> and is used to specify the destination URL of a hyperlink.</p>
         <p><strong>How to Use It:</strong></p>
         <pre><code>&lt;a href="https://www.example.com"&gt;Click Here&lt;/a&gt;</code></pre>
         <p><strong>Explanation:</strong></p>
@@ -1193,5 +1252,23 @@ body {
 </footer>
 
 <script src="/assets/js/main.js"></script>
+<script>
+  // Remove all old event listeners by cloning
+  const hamburger = document.getElementById('hamburger');
+  const mainNav = document.getElementById('mainNav');
+  if (hamburger && mainNav) {
+    const freshBtn = hamburger.cloneNode(true);
+    hamburger.parentNode.replaceChild(freshBtn, hamburger);
+    freshBtn.addEventListener('click', function() {
+      mainNav.classList.toggle('open');
+    });
+    // Close menu when a link is clicked
+    mainNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mainNav.classList.remove('open');
+      });
+    });
+  }
+</script>
 </body>
 </html>

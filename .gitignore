@@ -1,0 +1,14 @@
+# Editor directories and tools
+.vscode/
+.claude/
+
+# Documents
+*.docx
+
+# Loose scripts in the root directory
+/*.ps1
+/*.py
+
+# System files
+.DS_Store
+Thumbs.db
