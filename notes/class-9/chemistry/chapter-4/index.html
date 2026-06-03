@@ -31,7 +31,9 @@
     .main-nav ul{list-style:none;display:flex;gap:20px;padding:0;margin:0}
     .main-nav ul li a{color:#cde8d8;font-size:.9rem;font-weight:500}
     .main-nav ul li a:hover,.main-nav ul li a.active{color:#fff;text-decoration:none}
-    .header-cta .cta-btn{background:var(--gold);color:#fff;padding:8px 16px;border-radius:6px;font-size:.85rem;font-weight:600;white-space:nowrap;text-decoration:none}
+    .header-cta .cta-btn-nav{background:var(--gold);color:#fff;padding:8px 18px;border-radius:6px;font-size:.85rem;font-weight:600;white-space:nowrap;text-decoration:none;display:inline-block}
+    .header-cta .cta-btn-nav:hover{background:#b8860b;text-decoration:none;color:#fff}
+    @media(max-width:700px){.main-nav{display:none}}
     .site-header .logo{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:700;color:var(--gold)}
     .header-wa{background:var(--gold);color:#fff;padding:8px 16px;border-radius:6px;font-size:.85rem;font-weight:600;white-space:nowrap}
     .breadcrumb{background:var(--light-green);padding:10px 24px;font-size:.82rem;color:#555;border-bottom:1px solid var(--border)}
@@ -186,7 +188,7 @@
       </ul>
     </nav>
     <div class="header-cta">
-      <a href="https://wa.me/923315162406" target="_blank" class="cta-btn">Free Trial Class</a>
+      <a href="https://wa.me/923315162406" target="_blank" class="cta-btn-nav">Free Trial Class</a>
     </div>
   </div>
 </header>
